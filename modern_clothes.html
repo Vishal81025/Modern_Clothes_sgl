@@ -1,0 +1,2161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Modern Clothes – Style That Defines You</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --black: #0a0a0a; --dark: #111318; --card: #161b22; --navy: #0d1b2a;
+    --grey: #8b949e; --light: #c9d1d9; --white: #f0f6fc;
+    --accent: #e8a020; --border: rgba(255,255,255,0.07);
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html { scroll-behavior:smooth; }
+  body { font-family:'Outfit',sans-serif; background:var(--black); color:var(--white); overflow-x:hidden; }
+
+  /* HEADER */
+  header { position:fixed; top:0; width:100%; z-index:1000; background:rgba(10,10,10,0.94); backdrop-filter:blur(16px); border-bottom:1px solid var(--border); }
+  .header-inner { max-width:1280px; margin:auto; display:flex; align-items:center; justify-content:space-between; padding:0 24px; height:68px; }
+  .brand { display:flex; flex-direction:column; line-height:1; text-decoration:none; }
+  .brand-name { font-family:'Bebas Neue',sans-serif; font-size:2rem; letter-spacing:3px; background:linear-gradient(135deg,#fff,var(--accent)); -webkit-background-clip:text; -webkit-text-fill-color:transparent; }
+  .brand-tag { font-size:0.6rem; color:var(--grey); letter-spacing:2.5px; text-transform:uppercase; }
+  nav { display:flex; gap:26px; }
+  nav a { color:var(--light); text-decoration:none; font-size:0.87rem; font-weight:500; position:relative; transition:color .2s; }
+  nav a::after { content:''; position:absolute; bottom:-4px; left:0; width:0; height:1px; background:var(--accent); transition:width .2s; }
+  nav a:hover { color:var(--accent); }
+  nav a:hover::after { width:100%; }
+  .header-actions { display:flex; align-items:center; gap:12px; }
+  .cart-btn { background:var(--accent); color:#000; border:none; padding:8px 18px; border-radius:4px; cursor:pointer; font-family:'Outfit',sans-serif; font-weight:700; font-size:0.84rem; display:flex; align-items:center; gap:7px; transition:opacity .2s; }
+  .cart-btn:hover { opacity:.85; }
+  .cart-count { background:#000; color:var(--accent); border-radius:50%; width:20px; height:20px; display:flex; align-items:center; justify-content:center; font-size:0.72rem; font-weight:700; }
+  .menu-toggle { display:none; background:none; border:none; color:var(--white); font-size:1.5rem; cursor:pointer; }
+  .theme-toggle { background:rgba(232,160,32,.1); border:1.5px solid var(--accent); color:var(--accent); width:40px; height:40px; border-radius:50%; cursor:pointer; font-size:1.2rem; display:flex; align-items:center; justify-content:center; transition:all .3s; }
+  .theme-toggle:hover { background:var(--accent); color:#000; transform:scale(1.1); }
+  .admin-link-btn {
+    position: relative;
+    background: linear-gradient(135deg, rgba(232,160,32,.08) 0%, rgba(232,160,32,.04) 100%);
+    border: 1px solid rgba(232,160,32,.35);
+    color: var(--accent);
+    height: 36px;
+    padding: 0 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: .95rem;
+    letter-spacing: 2px;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    transition: all .3s cubic-bezier(.34,.1,.68,.95);
+    text-decoration: none;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  .admin-link-btn::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(232,160,32,.18), transparent);
+    opacity: 0;
+    transition: opacity .3s;
+  }
+  .admin-link-btn:hover::before { opacity: 1; }
+  .admin-link-btn:hover {
+    border-color: var(--accent);
+    color: #fff;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 18px rgba(232,160,32,.25), 0 0 0 1px rgba(232,160,32,.2);
+  }
+  .admin-link-btn .adm-ico {
+    font-size: .85rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 18px;
+    height: 18px;
+    background: rgba(232,160,32,.15);
+    border-radius: 3px;
+    flex-shrink: 0;
+    transition: background .3s;
+  }
+  .admin-link-btn:hover .adm-ico { background: rgba(232,160,32,.3); }
+  .admin-link-btn .adm-dot {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: var(--accent);
+    animation: admPulse 2s ease-in-out infinite;
+  }
+  @keyframes admPulse {
+    0%,100% { box-shadow: 0 0 0 0 rgba(232,160,32,.5); }
+    50% { box-shadow: 0 0 0 4px rgba(232,160,32,0); }
+  }
+  body.light-mode .admin-link-btn {
+    background: linear-gradient(135deg, rgba(232,160,32,.06), transparent);
+    border-color: rgba(232,160,32,.4);
+    color: #b07a10;
+  }
+  body.light-mode .admin-link-btn:hover { color: #000; }
+
+  /* LIGHT MODE */
+  body.light-mode { background:#ffffff; color:#1a1a1a; }
+  body.light-mode header { background:rgba(255,255,255,.98); border-bottom-color:rgba(0,0,0,.1); }
+  body.light-mode nav a { color:#333; }
+  body.light-mode .cart-btn { background:var(--accent); color:#fff; }
+  body.light-mode .stats-bar { background:#ffffff; border-color:rgba(0,0,0,.1); }
+  body.light-mode .cat-nav { background:#ffffff; border-color:rgba(0,0,0,.1); }
+  body.light-mode .cat-link { color:#666; }
+  body.light-mode .pcard { background:#ffffff; border-color:rgba(0,0,0,.1); }
+  body.light-mode .pname { color:#1a1a1a; }
+  body.light-mode .pdesc { color:#666; }
+  body.light-mode .sec-desc { color:#666; }
+  body.light-mode .sec-title { color:#1a1a1a; }
+  body.light-mode .about-txt h2 { color:#1a1a1a; }
+  body.light-mode .about-txt p { color:#666; }
+  body.light-mode .about-card { background:linear-gradient(135deg,#f9f9f9,#ffffff); border-color:rgba(0,0,0,.1); }
+  body.light-mode .ccard { background:#ffffff; border-color:rgba(0,0,0,.1); }
+  body.light-mode .clbl { color:#666; }
+  body.light-mode .cval { color:#1a1a1a; }
+  body.light-mode .cform { background:#ffffff; border-color:rgba(0,0,0,.1); }
+  body.light-mode .cform h3 { color:#1a1a1a; }
+  body.light-mode .fg label { color:#666; }
+  body.light-mode .fg input,.fg select,.fg textarea { background:#f9f9f9; border-color:rgba(0,0,0,.15); color:#1a1a1a; }
+  body.light-mode footer { background:#ffffff; border-color:rgba(0,0,0,.1); }
+  body.light-mode .modal { background:#ffffff; border-color:rgba(0,0,0,.1); }
+  body.light-mode .modal-name { color:#1a1a1a; }
+  body.light-mode .modal-desc { color:#666; }
+  body.light-mode .cart-drawer { background:#ffffff; border-color:rgba(0,0,0,.1); }
+  body.light-mode .cart-hdr h3 { color:#1a1a1a; }
+  body.light-mode .citem { border-color:rgba(0,0,0,.1); color:#1a1a1a; }
+  body.light-mode .citem-name { color:#1a1a1a; }
+  body.light-mode .ord-sum { background:#ffffff; border-color:rgba(0,0,0,.1); }
+  body.light-mode .ord-sum h3 { color:#1a1a1a; }
+  body.light-mode #about { background:#ffffff; }
+  body.light-mode #contact { background:#ffffff; }
+  body.light-mode #checkout { background:#ffffff; }
+  body.light-mode .sub-title { color:#1a1a1a; }
+  body.light-mode .sub-desc { color:#666; }
+  /* admin-link-btn light mode handled above */
+
+  /* CAROUSEL */
+  .hero-section { margin-top:68px; }
+  .carousel-wrap { position:relative; width:100%; overflow:hidden; background:#1a1a1a; }
+  .carousel-track { display:flex; transition:transform .65s cubic-bezier(.77,0,.18,1); will-change:transform; }
+  .c-slide { min-width:100%; position:relative; height:540px; overflow:hidden; flex-shrink:0; display:flex; align-items:center; justify-content:center; }
+  .c-slide img { width:100%; height:100%; object-fit:cover; display:block; transform:scale(1.2) translateZ(0); transition:transform 1s cubic-bezier(.34,.1,.68,.95),filter 1s ease; filter:brightness(.88) contrast(1.05) saturate(1.1); will-change:transform,filter; }
+  .c-slide.active img { transform:scale(1) translateZ(0); filter:brightness(1) contrast(1.08) saturate(1.15); }
+  .c-overlay { position:absolute; inset:0; background:linear-gradient(90deg,rgba(0,0,0,.88) 0%,rgba(0,0,0,.65) 40%,rgba(0,0,0,.35) 70%,transparent 100%); display:flex; align-items:center; padding:0 72px; z-index:2; }
+  .c-content { max-width:540px; }
+  .c-badge { display:inline-flex; align-items:center; gap:9px; background:rgba(232,160,32,.15); border:2px solid var(--accent); color:var(--accent); padding:10px 20px; border-radius:50px; font-size:0.78rem; font-weight:700; letter-spacing:2.5px; text-transform:uppercase; margin-bottom:20px; animation:badgePulse .7s ease both; animation-delay:.1s; box-shadow:0 0 25px rgba(232,160,32,.3); }
+  @keyframes badgePulse { from{opacity:0;transform:scale(.7) translateY(30px)} to{opacity:1;transform:scale(1) translateY(0)} }
+  .c-title { font-family:'Bebas Neue',sans-serif; font-size:clamp(2.8rem,5.5vw,5rem); line-height:.93; letter-spacing:2px; margin-bottom:16px; animation:titleSlideIn .8s cubic-bezier(.34,.1,.68,.95) both; animation-delay:.2s; text-shadow:0 6px 20px rgba(0,0,0,.6); }
+  @keyframes titleSlideIn { from{opacity:0;transform:translateX(-50px) skewX(5deg)} to{opacity:1;transform:translateX(0) skewX(0)} }
+  .c-title span { color:var(--accent); }
+  .c-sub { color:rgba(255,255,255,.92); font-size:1rem; line-height:1.7; margin-bottom:32px; animation:subtitleFadeIn .7s ease both; animation-delay:.35s; }
+  @keyframes subtitleFadeIn { from{opacity:0;transform:translateY(20px)} to{opacity:1;transform:translateY(0)} }
+  .c-btns { display:flex; gap:16px; flex-wrap:wrap; animation:ctaSlideIn .8s ease both; animation-delay:.45s; }
+  @keyframes ctaSlideIn { from{opacity:0;transform:translateY(30px) scale(.95)} to{opacity:1;transform:translateY(0) scale(1)} }
+  .c-arrow { position:absolute; top:50%; transform:translateY(-50%); background:rgba(255,255,255,.12); backdrop-filter:blur(10px); border:1.5px solid rgba(232,160,32,.35); color:#fff; width:56px; height:56px; border-radius:50%; font-size:2rem; cursor:pointer; z-index:10; display:flex; align-items:center; justify-content:center; transition:all .3s; }
+  .c-arrow:hover { background:var(--accent); color:#000; transform:translateY(-50%) scale(1.12); }
+  .c-prev { left:24px; } .c-next { right:24px; }
+  .c-dots { position:absolute; bottom:28px; left:50%; transform:translateX(-50%); display:flex; gap:10px; z-index:10; background:rgba(0,0,0,.35); padding:12px 20px; border-radius:50px; backdrop-filter:blur(10px); border:1px solid rgba(255,255,255,.1); }
+  .c-dot { width:10px; height:10px; border-radius:50%; background:rgba(255,255,255,.5); border:none; cursor:pointer; transition:all .4s; padding:0; }
+  .c-dot.active { background:var(--accent); width:32px; border-radius:5px; }
+  .c-progress { position:absolute; bottom:0; left:0; height:4px; background:linear-gradient(90deg,var(--accent),rgba(232,160,32,.6)); z-index:10; animation:cProgress 4s cubic-bezier(.25,.46,.45,.94) forwards; }
+  @keyframes cProgress { from{width:0%} to{width:100%} }
+
+  /* BUTTONS */
+  .btn-gold { background:var(--accent); color:#000; padding:12px 28px; border-radius:4px; text-decoration:none; font-weight:700; font-size:.9rem; display:inline-block; transition:transform .2s,box-shadow .2s; border:none; cursor:pointer; font-family:'Outfit',sans-serif; }
+  .btn-gold:hover { transform:translateY(-2px); box-shadow:0 8px 28px rgba(232,160,32,.4); }
+  .btn-outline { border:1px solid rgba(255,255,255,.3); color:var(--white); padding:12px 28px; border-radius:4px; text-decoration:none; font-weight:600; font-size:.9rem; transition:all .2s; display:inline-block; }
+  .btn-outline:hover { border-color:var(--accent); color:var(--accent); }
+  .btn-green { background:#25D366; color:#fff; border:none; padding:14px; border-radius:6px; font-weight:700; font-size:.9rem; cursor:pointer; font-family:'Outfit',sans-serif; display:flex; align-items:center; justify-content:center; gap:9px; text-decoration:none; transition:opacity .2s; }
+  .btn-green:hover { opacity:.85; }
+
+  /* STATS */
+  .stats-bar { background:var(--card); border-top:1px solid var(--border); border-bottom:1px solid var(--border); padding:24px; }
+  .stats-inner { max-width:1280px; margin:auto; display:flex; justify-content:space-around; flex-wrap:wrap; gap:18px; }
+  .stat { text-align:center; }
+  .stat-num { font-family:'Bebas Neue',sans-serif; font-size:2.2rem; color:var(--accent); letter-spacing:2px; }
+  .stat-lbl { font-size:.75rem; color:var(--grey); letter-spacing:1px; text-transform:uppercase; margin-top:2px; }
+
+  /* CAT NAV */
+  .cat-nav { background:var(--card); border-bottom:1px solid var(--border); padding:0 24px; position:sticky; top:68px; z-index:900; }
+  .cat-nav-in { max-width:1280px; margin:auto; display:flex; gap:2px; overflow-x:auto; scrollbar-width:none; }
+  .cat-nav-in::-webkit-scrollbar { display:none; }
+  .cat-link { display:flex; flex-direction:column; align-items:center; gap:3px; padding:12px 20px; text-decoration:none; color:var(--grey); font-size:.75rem; font-weight:600; letter-spacing:.5px; border-bottom:2px solid transparent; white-space:nowrap; transition:all .2s; flex-shrink:0; }
+  .cat-link:hover { color:var(--accent); border-bottom-color:var(--accent); }
+  .cat-ico { font-size:1.15rem; }
+
+  /* SHARED */
+  .container { max-width:1280px; margin:auto; }
+  .sec-tag { font-size:.72rem; color:var(--accent); letter-spacing:3px; text-transform:uppercase; font-weight:600; margin-bottom:9px; }
+  .sec-title { font-family:'Bebas Neue',sans-serif; font-size:clamp(2rem,5vw,3rem); letter-spacing:2px; }
+  .sec-desc { color:var(--grey); margin-top:9px; font-size:.91rem; }
+  .sec-hdr { text-align:center; margin-bottom:42px; }
+  .sub-hdr { margin-bottom:26px; }
+  .sub-left { display:flex; align-items:center; gap:16px; }
+  .sub-ico { font-size:2rem; width:58px; height:58px; background:rgba(232,160,32,.08); border:1px solid rgba(232,160,32,.22); border-radius:12px; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+  .sub-title { font-family:'Bebas Neue',sans-serif; font-size:1.65rem; letter-spacing:2px; margin-bottom:2px; }
+  .sub-desc { color:var(--grey); font-size:.84rem; }
+  .sub-label { display:flex; align-items:center; gap:13px; margin-bottom:17px; }
+  .sub-label::before { content:''; flex:0 0 3px; height:19px; background:var(--accent); border-radius:2px; }
+  .sub-label span { font-family:'Bebas Neue',sans-serif; font-size:1.05rem; letter-spacing:2px; color:var(--light); }
+  .sub-label::after { content:''; flex:1; height:1px; background:var(--border); }
+  .mt-40 { margin-top:40px; }
+
+  /* PRODUCT */
+  .pgrid { display:grid; grid-template-columns:repeat(4,1fr); gap:18px; }
+  .pcard { background:var(--card); border:1px solid var(--border); border-radius:12px; overflow:hidden; transition:transform .22s,border-color .22s; cursor:pointer; position:relative; }
+  .pcard:hover { transform:translateY(-5px); border-color:rgba(232,160,32,.35); }
+  .pcard.unavailable { opacity:.55; }
+  .pcard.unavailable::after { content:'SOLD OUT'; position:absolute; top:50%; left:50%; transform:translate(-50%,-50%) rotate(-20deg); font-family:'Bebas Neue',sans-serif; font-size:1.6rem; color:#e74c3c; border:3px solid #e74c3c; padding:6px 18px; border-radius:6px; background:rgba(0,0,0,.7); z-index:5; letter-spacing:3px; pointer-events:none; }
+  .pimg { width:100%; height:250px; position:relative; overflow:hidden; background:#0d1117; }
+  .pimg img { width:100%; height:100%; object-fit:cover; display:block; transition:transform .45s; }
+  .pcard:hover .pimg img { transform:scale(1.07); }
+  .pbadge { position:absolute; top:10px; left:10px; z-index:1; background:var(--accent); color:#000; font-size:.67rem; font-weight:700; padding:3px 10px; border-radius:40px; }
+  .pinfo { padding:14px; }
+  .pname { font-weight:600; font-size:.89rem; margin-bottom:4px; }
+  .pdesc { color:var(--grey); font-size:.77rem; line-height:1.5; margin-bottom:12px; }
+  .pfooter { display:flex; align-items:center; justify-content:space-between; }
+  .pprice { font-family:'Bebas Neue',sans-serif; font-size:1.25rem; color:var(--accent); }
+  .pprice span { font-family:'Outfit',sans-serif; font-size:.71rem; color:var(--grey); text-decoration:line-through; margin-left:4px; font-weight:400; }
+  .padd { background:rgba(232,160,32,.08); border:1px solid rgba(232,160,32,.26); color:var(--accent); padding:6px 12px; border-radius:4px; cursor:pointer; font-size:.75rem; font-weight:600; transition:all .2s; font-family:'Outfit',sans-serif; }
+  .padd:hover { background:var(--accent); color:#000; }
+  .padd:disabled { opacity:.4; cursor:not-allowed; }
+
+  /* MODAL */
+  .modal-overlay { display:none; position:fixed; inset:0; z-index:2000; background:rgba(0,0,0,.88); backdrop-filter:blur(8px); align-items:center; justify-content:center; padding:20px; }
+  .modal-overlay.open { display:flex; }
+  .modal { background:var(--card); border:1px solid var(--border); border-radius:16px; max-width:720px; width:100%; max-height:92vh; overflow-y:auto; animation:slideUp .3s ease; }
+  @keyframes slideUp { from{opacity:0;transform:translateY(40px)} to{opacity:1;transform:translateY(0)} }
+  .modal-close { position:absolute; top:14px; right:18px; background:none; border:none; color:var(--grey); font-size:1.6rem; cursor:pointer; z-index:10; }
+  .modal-close:hover { color:var(--white); }
+  .modal-inner { display:grid; grid-template-columns:1fr 1fr; position:relative; }
+  .modal-img { min-height:320px; overflow:hidden; border-radius:16px 0 0 16px; background:#0d1117; }
+  .modal-img img { width:100%; height:100%; object-fit:cover; display:block; }
+  .modal-det { padding:28px 24px; }
+  .modal-cat { font-size:.7rem; color:var(--accent); letter-spacing:2px; text-transform:uppercase; margin-bottom:7px; }
+  .modal-name { font-family:'Bebas Neue',sans-serif; font-size:1.7rem; letter-spacing:1px; margin-bottom:9px; }
+  body.light-mode .modal-name { color:#1a1a1a; }
+  .modal-price { font-family:'Bebas Neue',sans-serif; font-size:1.85rem; color:var(--accent); margin-bottom:13px; }
+  .modal-desc { color:var(--grey); font-size:.87rem; line-height:1.7; margin-bottom:24px; }
+  .modal-btns { display:flex; flex-direction:column; gap:11px; }
+
+  /* ABOUT */
+  #about { background:var(--black); padding:80px 24px; }
+  .about-grid { display:grid; grid-template-columns:1fr 1fr; gap:56px; align-items:center; }
+  .about-card { background:linear-gradient(135deg,var(--navy),#1a1000); border:1px solid var(--border); border-radius:16px; padding:46px; text-align:center; position:relative; overflow:hidden; }
+  .about-card::before { content:''; position:absolute; top:-60px; right:-60px; width:200px; height:200px; background:radial-gradient(circle,rgba(232,160,32,.14),transparent 70%); border-radius:50%; }
+  .about-ico { font-size:5rem; margin-bottom:16px; }
+  .about-owner { font-family:'Bebas Neue',sans-serif; font-size:2rem; letter-spacing:2px; color:var(--accent); }
+  .about-loc { color:var(--grey); font-size:.85rem; margin-top:5px; }
+  .about-txt h2 { font-family:'Bebas Neue',sans-serif; font-size:2.3rem; letter-spacing:2px; margin-bottom:16px; }
+  .about-txt p { color:var(--grey); line-height:1.8; margin-bottom:13px; }
+  .hl { color:var(--accent); font-weight:600; }
+
+  /* CONTACT */
+  #contact { background:var(--dark); padding:80px 24px; }
+  .contact-grid { display:grid; grid-template-columns:1fr 1fr; gap:34px; }
+  .contact-cards { display:flex; flex-direction:column; gap:16px; }
+  .ccard { background:var(--card); border:1px solid var(--border); border-radius:12px; padding:20px; display:flex; gap:13px; align-items:flex-start; transition:border-color .2s; }
+  .ccard:hover { border-color:rgba(232,160,32,.3); }
+  .cico { font-size:1.65rem; flex-shrink:0; }
+  .clbl { font-size:.7rem; color:var(--grey); letter-spacing:1px; text-transform:uppercase; margin-bottom:3px; }
+  .cval { font-weight:600; font-size:.9rem; }
+  .cval a { color:var(--white); text-decoration:none; }
+  .cval a:hover { color:var(--accent); }
+  .cform { background:var(--card); border:1px solid var(--border); border-radius:12px; padding:28px; }
+  .cform h3 { font-family:'Bebas Neue',sans-serif; font-size:1.4rem; letter-spacing:1px; margin-bottom:20px; }
+  .fg { margin-bottom:13px; }
+  .fg label { display:block; font-size:.79rem; color:var(--grey); margin-bottom:5px; }
+  .fg input,.fg select,.fg textarea { width:100%; background:rgba(255,255,255,.04); border:1px solid var(--border); border-radius:6px; padding:10px 14px; color:var(--white); font-family:'Outfit',sans-serif; font-size:.87rem; outline:none; transition:border-color .2s; }
+  .fg input:focus,.fg select:focus,.fg textarea:focus { border-color:var(--accent); }
+  .fg select option { background:var(--card); }
+  .fg textarea { resize:vertical; min-height:92px; }
+  .submit-btn { background:var(--accent); color:#000; border:none; padding:12px 24px; border-radius:6px; font-weight:700; font-size:.87rem; cursor:pointer; font-family:'Outfit',sans-serif; width:100%; transition:opacity .2s; }
+  .submit-btn:hover { opacity:.85; }
+  .map-wrap { margin-top:32px; border-radius:12px; overflow:hidden; border:1px solid var(--border); }
+  .map-wrap iframe { display:block; width:100%; height:265px; }
+
+  /* CHECKOUT */
+  #checkout { background:var(--black); padding:80px 24px; display:none; }
+  #checkout.visible { display:block; }
+  .ck-grid { display:grid; grid-template-columns:1.4fr 1fr; gap:34px; }
+  .ck-form h2 { font-family:'Bebas Neue',sans-serif; font-size:1.85rem; letter-spacing:2px; margin-bottom:24px; }
+  body.light-mode .ck-form h2 { color:#1a1a1a; }
+  .ord-sum { background:var(--card); border:1px solid var(--border); border-radius:12px; padding:24px; height:fit-content; }
+  .ord-sum h3 { font-family:'Bebas Neue',sans-serif; font-size:1.3rem; letter-spacing:1px; margin-bottom:16px; }
+  .ord-item { display:flex; justify-content:space-between; padding:8px 0; border-bottom:1px solid var(--border); font-size:.87rem; }
+  .ord-total { display:flex; justify-content:space-between; margin-top:12px; font-weight:700; }
+  .ord-price { color:var(--accent); font-family:'Bebas Neue',sans-serif; font-size:1.28rem; }
+
+  /* CART */
+  .cart-drawer { position:fixed; right:-440px; top:0; height:100vh; width:420px; background:var(--card); z-index:3000; border-left:1px solid var(--border); transition:right .3s ease; display:flex; flex-direction:column; }
+  .cart-drawer.open { right:0; }
+  .cart-hdr { padding:20px; border-bottom:1px solid var(--border); display:flex; align-items:center; justify-content:space-between; }
+  .cart-hdr h3 { font-family:'Bebas Neue',sans-serif; font-size:1.45rem; letter-spacing:1px; }
+  .cart-cls { background:none; border:none; color:var(--grey); font-size:1.4rem; cursor:pointer; }
+  .cart-cls:hover { color:var(--white); }
+  .cart-body { flex:1; overflow-y:auto; padding:16px; }
+  .cart-empty { text-align:center; padding:54px 20px; color:var(--grey); }
+  .citem { display:flex; gap:13px; padding:13px 0; border-bottom:1px solid var(--border); align-items:center; }
+  .citem-info { flex:1; }
+  .citem-name { font-weight:600; font-size:.87rem; margin-bottom:3px; }
+  .citem-price { color:var(--accent); font-weight:700; font-size:.87rem; }
+  .citem-rm { background:none; border:none; color:var(--grey); cursor:pointer; font-size:1.1rem; }
+  .citem-rm:hover { color:#e74c3c; }
+  .cart-ftr { padding:20px; border-top:1px solid var(--border); }
+  .cart-total { display:flex; justify-content:space-between; align-items:center; margin-bottom:16px; }
+  .cart-total-lbl { color:var(--grey); }
+  .cart-total-val { font-family:'Bebas Neue',sans-serif; font-size:1.4rem; color:var(--accent); }
+
+  /* FOOTER */
+  footer { background:var(--dark); border-top:1px solid var(--border); padding:46px 24px 22px; }
+  .footer-in { max-width:1280px; margin:auto; }
+  .footer-top { display:grid; grid-template-columns:2fr 1fr 1fr; gap:38px; margin-bottom:34px; }
+  .footer-brand .brand-name { font-family:'Bebas Neue',sans-serif; font-size:1.75rem; letter-spacing:3px; background:linear-gradient(135deg,#fff,var(--accent)); -webkit-background-clip:text; -webkit-text-fill-color:transparent; }
+  .footer-brand p { color:var(--grey); font-size:.85rem; line-height:1.75; margin-top:10px; }
+  .footer-col h4 { font-weight:600; font-size:.83rem; letter-spacing:1px; text-transform:uppercase; margin-bottom:13px; }
+  .footer-col a { display:block; color:var(--grey); text-decoration:none; font-size:.85rem; margin-bottom:7px; transition:color .2s; }
+  .footer-col a:hover { color:var(--accent); }
+  .footer-btm { border-top:1px solid var(--border); padding-top:20px; text-align:center; color:var(--grey); font-size:.79rem; }
+
+  /* WA FLOAT */
+  .wa-float { position:fixed; bottom:26px; right:26px; z-index:900; background:#25D366; color:#fff; border-radius:50%; width:60px; height:60px; display:flex; align-items:center; justify-content:center; font-size:1.75rem; box-shadow:0 4px 22px rgba(37,211,102,.45); text-decoration:none; transition:transform .2s; }
+  .wa-float:hover { transform:scale(1.12); }
+
+  /* TOAST */
+  .toast { position:fixed; bottom:100px; right:26px; z-index:4000; background:var(--accent); color:#000; padding:11px 21px; border-radius:8px; font-weight:600; font-size:.85rem; transform:translateY(80px); opacity:0; transition:all .3s; pointer-events:none; }
+  .toast.show { transform:translateY(0); opacity:1; }
+
+  /* ============================================
+     ADMIN PANEL STYLES
+  ============================================ */
+
+  /* Admin Login Modal */
+  .admin-login-overlay { display:none; position:fixed; inset:0; z-index:5000; background:rgba(0,0,0,.95); backdrop-filter:blur(12px); align-items:center; justify-content:center; }
+  .admin-login-overlay.open { display:flex; }
+  .admin-login-box { background:var(--card); border:1px solid rgba(232,160,32,.3); border-radius:20px; padding:48px; width:100%; max-width:420px; text-align:center; box-shadow:0 0 60px rgba(232,160,32,.15); }
+  .admin-login-ico { font-size:3rem; margin-bottom:16px; }
+  .admin-login-box h2 { font-family:'Bebas Neue',sans-serif; font-size:2rem; letter-spacing:3px; color:var(--accent); margin-bottom:6px; }
+  .admin-login-box p { color:var(--grey); font-size:.85rem; margin-bottom:28px; }
+  .admin-login-box .fg input { background:rgba(255,255,255,.06); border-color:rgba(255,255,255,.15); color:#fff; font-size:1rem; padding:13px 16px; }
+  .admin-login-box .fg input:focus { border-color:var(--accent); }
+  .admin-login-box .fg label { color:var(--grey); }
+  .admin-login-err { color:#e74c3c; font-size:.82rem; margin-top:-6px; margin-bottom:10px; display:none; }
+
+  /* Admin Panel */
+  #admin-panel { display:none; position:fixed; inset:0; z-index:4500; background:var(--black); overflow-y:auto; }
+  #admin-panel.open { display:block; }
+  .admin-header { background:rgba(10,10,10,.96); border-bottom:1px solid rgba(232,160,32,.2); padding:0 28px; height:68px; display:flex; align-items:center; justify-content:space-between; position:sticky; top:0; z-index:10; backdrop-filter:blur(12px); }
+  .admin-header .brand-name { font-family:'Bebas Neue',sans-serif; font-size:1.5rem; letter-spacing:3px; background:linear-gradient(135deg,#fff,var(--accent)); -webkit-background-clip:text; -webkit-text-fill-color:transparent; }
+  .admin-header .brand-name span { color:var(--accent); -webkit-text-fill-color:var(--accent); }
+  .admin-nav { display:flex; gap:8px; }
+  .admin-tab { background:none; border:1px solid var(--border); color:var(--grey); padding:8px 18px; border-radius:6px; cursor:pointer; font-family:'Outfit',sans-serif; font-size:.82rem; font-weight:600; transition:all .2s; }
+  .admin-tab.active,.admin-tab:hover { background:var(--accent); color:#000; border-color:var(--accent); }
+  .admin-close-btn { background:rgba(231,76,60,.12); border:1px solid rgba(231,76,60,.3); color:#e74c3c; padding:8px 18px; border-radius:6px; cursor:pointer; font-family:'Outfit',sans-serif; font-size:.82rem; font-weight:600; transition:all .2s; }
+  .admin-close-btn:hover { background:#e74c3c; color:#fff; }
+  .admin-body { max-width:1200px; margin:auto; padding:32px 28px; }
+
+  /* Admin Stats */
+  .admin-stats { display:grid; grid-template-columns:repeat(4,1fr); gap:16px; margin-bottom:32px; }
+  .admin-stat-card { background:var(--card); border:1px solid var(--border); border-radius:12px; padding:20px; text-align:center; }
+  .admin-stat-num { font-family:'Bebas Neue',sans-serif; font-size:2rem; color:var(--accent); }
+  .admin-stat-lbl { color:var(--grey); font-size:.77rem; text-transform:uppercase; letter-spacing:1px; margin-top:4px; }
+
+  /* Admin Tabs Content */
+  .admin-tab-content { display:none; }
+  .admin-tab-content.active { display:block; }
+
+  /* Add Product Form */
+  .admin-section-title { font-family:'Bebas Neue',sans-serif; font-size:1.6rem; letter-spacing:2px; color:var(--white); margin-bottom:22px; display:flex; align-items:center; gap:12px; }
+  .admin-section-title span { font-size:.72rem; font-family:'Outfit',sans-serif; background:rgba(232,160,32,.12); color:var(--accent); border:1px solid rgba(232,160,32,.25); padding:4px 12px; border-radius:20px; letter-spacing:1px; }
+  .add-product-form { background:var(--card); border:1px solid var(--border); border-radius:16px; padding:32px; }
+  .form-grid { display:grid; grid-template-columns:1fr 1fr; gap:18px; }
+  .form-grid.full { grid-template-columns:1fr; }
+  .admin-fg { margin-bottom:0; }
+  .admin-fg label { display:block; font-size:.79rem; color:var(--grey); margin-bottom:6px; font-weight:500; letter-spacing:.5px; }
+  .admin-fg input,.admin-fg select,.admin-fg textarea { width:100%; background:rgba(255,255,255,.05); border:1px solid rgba(255,255,255,.1); border-radius:8px; padding:11px 14px; color:#fff; font-family:'Outfit',sans-serif; font-size:.9rem; outline:none; transition:border-color .2s; }
+  .admin-fg input:focus,.admin-fg select:focus,.admin-fg textarea:focus { border-color:var(--accent); background:rgba(255,255,255,.07); }
+  .admin-fg select option { background:#1a1f2a; color:#fff; }
+  .admin-fg textarea { resize:vertical; min-height:88px; }
+
+  /* Image Upload */
+  .img-upload-area { border:2px dashed rgba(232,160,32,.3); border-radius:12px; padding:28px; text-align:center; cursor:pointer; transition:all .3s; background:rgba(232,160,32,.03); position:relative; }
+  .img-upload-area:hover,.img-upload-area.drag-over { border-color:var(--accent); background:rgba(232,160,32,.07); }
+  .img-upload-area input[type="file"] { position:absolute; inset:0; opacity:0; cursor:pointer; width:100%; height:100%; }
+  .img-upload-ico { font-size:2.5rem; margin-bottom:10px; }
+  .img-upload-txt { color:var(--grey); font-size:.85rem; }
+  .img-upload-txt strong { color:var(--accent); }
+  .img-preview { width:100%; height:180px; object-fit:cover; border-radius:8px; margin-top:12px; display:none; border:1px solid rgba(232,160,32,.2); }
+
+  /* Also URL input for image */
+  .img-or { text-align:center; color:var(--grey); font-size:.78rem; margin:10px 0; position:relative; }
+  .img-or::before,.img-or::after { content:''; position:absolute; top:50%; width:42%; height:1px; background:var(--border); }
+  .img-or::before { left:0; } .img-or::after { right:0; }
+
+  /* Badge picker */
+  .badge-picker { display:flex; flex-wrap:wrap; gap:8px; margin-top:6px; }
+  .badge-opt { padding:5px 14px; border-radius:20px; border:1px solid var(--border); color:var(--grey); font-size:.76rem; cursor:pointer; transition:all .2s; background:transparent; font-family:'Outfit',sans-serif; }
+  .badge-opt.selected { background:var(--accent); color:#000; border-color:var(--accent); font-weight:700; }
+
+  /* Form actions */
+  .form-actions { display:flex; gap:12px; margin-top:24px; }
+  .btn-admin-save { background:var(--accent); color:#000; border:none; padding:12px 28px; border-radius:8px; font-weight:700; font-size:.9rem; cursor:pointer; font-family:'Outfit',sans-serif; transition:all .2s; display:flex; align-items:center; gap:8px; }
+  .btn-admin-save:hover { transform:translateY(-2px); box-shadow:0 8px 24px rgba(232,160,32,.4); }
+  .btn-admin-reset { background:transparent; color:var(--grey); border:1px solid var(--border); padding:12px 22px; border-radius:8px; font-weight:600; font-size:.9rem; cursor:pointer; font-family:'Outfit',sans-serif; transition:all .2s; }
+  .btn-admin-reset:hover { border-color:#e74c3c; color:#e74c3c; }
+
+  /* Product Management Table */
+  .prod-mgmt-filters { display:flex; gap:12px; margin-bottom:20px; flex-wrap:wrap; }
+  .filter-select { background:var(--card); border:1px solid var(--border); color:var(--grey); padding:9px 14px; border-radius:8px; font-family:'Outfit',sans-serif; font-size:.83rem; outline:none; cursor:pointer; }
+  .filter-select:focus { border-color:var(--accent); }
+  .search-input { flex:1; min-width:200px; background:var(--card); border:1px solid var(--border); color:#fff; padding:9px 14px; border-radius:8px; font-family:'Outfit',sans-serif; font-size:.83rem; outline:none; }
+  .search-input:focus { border-color:var(--accent); }
+  .search-input::placeholder { color:var(--grey); }
+
+  /* Product Admin Grid */
+  .admin-prod-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
+  .admin-pcard { background:var(--card); border:1px solid var(--border); border-radius:12px; overflow:hidden; transition:border-color .2s; }
+  .admin-pcard:hover { border-color:rgba(232,160,32,.25); }
+  .admin-pcard.is-custom { border-color:rgba(232,160,32,.2); }
+  .admin-pcard .pimg { height:170px; }
+  .admin-pcard .pinfo { padding:12px; }
+  .admin-pcard .pname { font-size:.85rem; }
+  .admin-pcard .pdesc { font-size:.74rem; margin-bottom:8px; }
+
+  /* Admin Card Actions */
+  .admin-card-actions { display:flex; gap:6px; padding:0 12px 12px; flex-wrap:wrap; }
+  .admin-action-btn { border:none; padding:6px 12px; border-radius:6px; cursor:pointer; font-family:'Outfit',sans-serif; font-size:.73rem; font-weight:600; transition:all .2s; display:flex; align-items:center; gap:5px; }
+  .btn-toggle-avail { background:rgba(39,174,96,.1); color:#27ae60; border:1px solid rgba(39,174,96,.25); }
+  .btn-toggle-avail:hover { background:#27ae60; color:#fff; }
+  .btn-toggle-avail.unavailable { background:rgba(231,76,60,.1); color:#e74c3c; border:1px solid rgba(231,76,60,.25); }
+  .btn-toggle-avail.unavailable:hover { background:#e74c3c; color:#fff; }
+  .btn-edit-prod { background:rgba(52,152,219,.1); color:#3498db; border:1px solid rgba(52,152,219,.25); }
+  .btn-edit-prod:hover { background:#3498db; color:#fff; }
+  .btn-delete-prod { background:rgba(231,76,60,.1); color:#e74c3c; border:1px solid rgba(231,76,60,.25); }
+  .btn-delete-prod:hover { background:#e74c3c; color:#fff; }
+
+  /* Status badge on admin cards */
+  .admin-status { font-size:.68rem; font-weight:700; padding:3px 10px; border-radius:20px; margin-left:auto; }
+  .admin-status.available { background:rgba(39,174,96,.15); color:#27ae60; }
+  .admin-status.unavailable { background:rgba(231,76,60,.15); color:#e74c3c; }
+  .admin-status.custom { background:rgba(232,160,32,.15); color:var(--accent); }
+
+  /* Category label on admin card */
+  .admin-cat-tag { font-size:.68rem; color:var(--accent); letter-spacing:1px; text-transform:uppercase; font-weight:600; margin-bottom:3px; }
+
+  /* Edit Modal */
+  .edit-modal-overlay { display:none; position:fixed; inset:0; z-index:6000; background:rgba(0,0,0,.92); backdrop-filter:blur(8px); align-items:center; justify-content:center; padding:20px; }
+  .edit-modal-overlay.open { display:flex; }
+  .edit-modal { background:var(--dark); border:1px solid rgba(232,160,32,.2); border-radius:16px; max-width:680px; width:100%; max-height:90vh; overflow-y:auto; padding:32px; }
+  .edit-modal h3 { font-family:'Bebas Neue',sans-serif; font-size:1.5rem; letter-spacing:2px; color:var(--accent); margin-bottom:22px; }
+
+  /* Confirm Delete Dialog */
+  .confirm-overlay { display:none; position:fixed; inset:0; z-index:7000; background:rgba(0,0,0,.9); align-items:center; justify-content:center; }
+  .confirm-overlay.open { display:flex; }
+  .confirm-box { background:var(--card); border:1px solid rgba(231,76,60,.3); border-radius:16px; padding:36px; text-align:center; max-width:380px; width:90%; }
+  .confirm-box .ico { font-size:3rem; margin-bottom:14px; }
+  .confirm-box h3 { font-family:'Bebas Neue',sans-serif; font-size:1.5rem; letter-spacing:2px; margin-bottom:8px; }
+  .confirm-box p { color:var(--grey); font-size:.87rem; margin-bottom:24px; line-height:1.6; }
+  .confirm-actions { display:flex; gap:12px; justify-content:center; }
+  .btn-confirm-del { background:#e74c3c; color:#fff; border:none; padding:11px 26px; border-radius:8px; font-weight:700; cursor:pointer; font-family:'Outfit',sans-serif; }
+  .btn-confirm-cancel { background:transparent; color:var(--grey); border:1px solid var(--border); padding:11px 26px; border-radius:8px; font-weight:600; cursor:pointer; font-family:'Outfit',sans-serif; }
+
+  /* Empty state */
+  .admin-empty { text-align:center; padding:60px 20px; color:var(--grey); }
+  .admin-empty .ico { font-size:3.5rem; margin-bottom:14px; }
+  .admin-empty p { font-size:.9rem; }
+
+  /* ============================================
+     STYLE REELS SECTION
+  ============================================ */
+  #style-reels { background:linear-gradient(180deg,var(--black) 0%,#0e0a00 50%,var(--black) 100%); padding:72px 24px; position:relative; overflow:hidden; }
+  #style-reels::before { content:''; position:absolute; top:-120px; left:50%; transform:translateX(-50%); width:700px; height:700px; background:radial-gradient(circle,rgba(232,160,32,.07) 0%,transparent 70%); pointer-events:none; }
+  body.light-mode #style-reels { background:linear-gradient(180deg,#f5f0e8 0%,#fff8ee 50%,#f5f0e8 100%); }
+  .reels-hdr { text-align:center; margin-bottom:48px; position:relative; }
+  .reels-section-badge { display:inline-flex; align-items:center; gap:10px; background:linear-gradient(135deg,rgba(232,160,32,.15),rgba(232,160,32,.05)); border:1.5px solid rgba(232,160,32,.4); color:var(--accent); padding:9px 22px; border-radius:50px; font-size:.75rem; font-weight:700; letter-spacing:3px; text-transform:uppercase; margin-bottom:16px; box-shadow:0 0 30px rgba(232,160,32,.15); }
+  .reels-section-badge .pulse { width:8px; height:8px; border-radius:50%; background:var(--accent); animation:reelPulse 1.4s ease-in-out infinite; }
+  @keyframes reelPulse { 0%,100%{transform:scale(1);opacity:1} 50%{transform:scale(1.5);opacity:.5} }
+  .reels-title { font-family:'Bebas Neue',sans-serif; font-size:clamp(2.2rem,5vw,3.4rem); letter-spacing:3px; line-height:1; margin-bottom:10px; }
+  .reels-title em { color:var(--accent); font-style:normal; }
+  .reels-subtitle { color:var(--grey); font-size:.9rem; }
+  body.light-mode .reels-subtitle { color:#666; }
+  body.light-mode .reels-title { color:#1a1a1a; }
+  .reels-outer { position:relative; }
+  .reels-track-wrap { overflow-x:auto; scroll-snap-type:x mandatory; scroll-behavior:smooth; -webkit-overflow-scrolling:touch; scrollbar-width:none; padding:8px 4px 16px; }
+  .reels-track-wrap::-webkit-scrollbar { display:none; }
+  .reels-track { display:flex; gap:18px; width:max-content; }
+  .reel-card { flex-shrink:0; width:220px; height:390px; border-radius:18px; overflow:hidden; position:relative; background:#0d1117; border:1.5px solid rgba(255,255,255,.07); scroll-snap-align:start; cursor:pointer; transition:transform .3s cubic-bezier(.34,.1,.68,.95),border-color .3s,box-shadow .3s; box-shadow:0 8px 32px rgba(0,0,0,.5); }
+  .reel-card:hover { transform:translateY(-8px) scale(1.02); border-color:rgba(232,160,32,.4); box-shadow:0 20px 50px rgba(0,0,0,.6),0 0 30px rgba(232,160,32,.12); }
+  body.light-mode .reel-card { background:#f0f0f0; border-color:rgba(0,0,0,.1); box-shadow:0 8px 24px rgba(0,0,0,.12); }
+  .reel-card video,.reel-card img.reel-thumb { width:100%; height:100%; object-fit:cover; display:block; position:absolute; inset:0; }
+  .reel-overlay { position:absolute; inset:0; background:linear-gradient(0deg,rgba(0,0,0,.85) 0%,rgba(0,0,0,.3) 40%,transparent 70%); display:flex; flex-direction:column; justify-content:space-between; padding:14px; }
+  .reel-top { display:flex; justify-content:flex-end; }
+  .reel-cat-chip { background:rgba(255,255,255,.15); backdrop-filter:blur(6px); color:#fff; font-size:.62rem; font-weight:700; padding:3px 9px; border-radius:20px; letter-spacing:1px; border:1px solid rgba(255,255,255,.2); }
+  .reel-label { font-family:'Bebas Neue',sans-serif; font-size:1.05rem; letter-spacing:1.5px; color:#fff; margin-bottom:6px; line-height:1.2; text-shadow:0 2px 8px rgba(0,0,0,.8); }
+  .reel-price-tag { display:inline-block; background:var(--accent); color:#000; font-family:'Bebas Neue',sans-serif; font-size:1rem; letter-spacing:1px; padding:3px 11px; border-radius:6px; }
+  .reel-actions { display:flex; gap:8px; margin-top:10px; }
+  .reel-action-btn { flex:1; background:rgba(255,255,255,.12); backdrop-filter:blur(8px); border:1px solid rgba(255,255,255,.2); color:#fff; border-radius:8px; padding:7px 6px; font-size:.7rem; font-weight:700; cursor:pointer; font-family:'Outfit',sans-serif; text-align:center; transition:all .2s; }
+  .reel-action-btn:hover { background:var(--accent); color:#000; border-color:var(--accent); }
+  .reel-action-btn.wa { background:rgba(37,211,102,.2); border-color:rgba(37,211,102,.4); }
+  .reel-action-btn.wa:hover { background:#25D366; color:#fff; }
+  .reel-play-ico { position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:52px; height:52px; background:rgba(255,255,255,.15); backdrop-filter:blur(10px); border-radius:50%; display:flex; align-items:center; justify-content:center; border:2px solid rgba(255,255,255,.3); transition:all .3s; pointer-events:none; }
+  .reel-play-ico svg { width:20px; height:20px; fill:#fff; margin-left:3px; }
+  .reel-card:hover .reel-play-ico { background:rgba(232,160,32,.8); border-color:var(--accent); transform:translate(-50%,-50%) scale(1.1); }
+  .reel-card:hover .reel-play-ico svg { fill:#000; }
+  .reels-empty { text-align:center; padding:60px 20px; color:var(--grey); border:2px dashed rgba(232,160,32,.2); border-radius:16px; }
+  .reels-empty .ico { font-size:3rem; margin-bottom:14px; }
+  .reels-arrow { position:absolute; top:50%; transform:translateY(-60%); background:rgba(10,10,10,.85); backdrop-filter:blur(10px); border:1.5px solid rgba(232,160,32,.3); color:var(--accent); width:44px; height:44px; border-radius:50%; font-size:1.6rem; cursor:pointer; z-index:10; display:flex; align-items:center; justify-content:center; transition:all .3s; box-shadow:0 4px 20px rgba(0,0,0,.4); }
+  .reels-arrow:hover { background:var(--accent); color:#000; border-color:var(--accent); transform:translateY(-60%) scale(1.08); }
+  .reels-arrow.left { left:-6px; } .reels-arrow.right { right:-6px; }
+  body.light-mode .reels-arrow { background:rgba(255,255,255,.92); border-color:rgba(232,160,32,.4); }
+  .reel-lightbox { display:none; position:fixed; inset:0; z-index:8000; background:rgba(0,0,0,.96); backdrop-filter:blur(16px); align-items:center; justify-content:center; }
+  .reel-lightbox.open { display:flex; }
+  .reel-lb-inner { position:relative; width:min(380px,92vw); }
+  .reel-lb-video { width:100%; border-radius:20px; max-height:85vh; object-fit:cover; background:#000; display:block; }
+  .reel-lb-img { width:100%; border-radius:20px; max-height:85vh; object-fit:cover; display:block; }
+  .reel-lb-close { position:absolute; top:-14px; right:-14px; background:rgba(231,76,60,.9); border:none; color:#fff; width:36px; height:36px; border-radius:50%; font-size:1.1rem; cursor:pointer; display:flex; align-items:center; justify-content:center; z-index:1; }
+  .reel-lb-info { position:absolute; bottom:0; left:0; right:0; background:linear-gradient(0deg,rgba(0,0,0,.9),transparent); padding:20px 18px 14px; border-radius:0 0 20px 20px; }
+  .reel-lb-name { font-family:'Bebas Neue',sans-serif; font-size:1.3rem; letter-spacing:2px; color:#fff; }
+  .reel-lb-price { color:var(--accent); font-family:'Bebas Neue',sans-serif; font-size:1.1rem; }
+  /* Admin Reels */
+  .admin-reels-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-top:20px; }
+  .admin-reel-card { background:var(--card); border:1px solid var(--border); border-radius:12px; overflow:hidden; }
+  .admin-reel-thumb { width:100%; height:160px; object-fit:cover; display:block; background:#0d1117; }
+  .admin-reel-thumb video { width:100%; height:100%; object-fit:cover; }
+  .admin-reel-info { padding:12px; }
+  .admin-reel-name { font-weight:600; font-size:.84rem; margin-bottom:3px; }
+  .admin-reel-cat { font-size:.7rem; color:var(--accent); letter-spacing:1px; text-transform:uppercase; margin-bottom:8px; }
+  .admin-reel-actions { display:flex; gap:6px; }
+  .reel-add-form { background:var(--card); border:1px solid var(--border); border-radius:16px; padding:28px; }
+  .reel-upload-area { border:2px dashed rgba(232,160,32,.3); border-radius:12px; padding:32px; text-align:center; cursor:pointer; transition:all .3s; background:rgba(232,160,32,.03); position:relative; margin-bottom:16px; }
+  .reel-upload-area:hover { border-color:var(--accent); background:rgba(232,160,32,.07); }
+  .reel-upload-area input[type="file"] { position:absolute; inset:0; opacity:0; cursor:pointer; width:100%; height:100%; }
+  .reel-upload-ico { font-size:2.8rem; margin-bottom:10px; }
+  .reel-upload-txt { color:var(--grey); font-size:.85rem; }
+  .reel-upload-txt strong { color:var(--accent); }
+  .reel-media-preview { display:none; margin-top:12px; border-radius:10px; overflow:hidden; max-height:200px; background:#000; }
+  .reel-media-preview video,.reel-media-preview img { width:100%; max-height:200px; object-fit:cover; display:block; }
+
+  /* RESPONSIVE */
+  @media(max-width:1024px) { .admin-stats { grid-template-columns:repeat(2,1fr); } .admin-prod-grid { grid-template-columns:repeat(2,1fr); } .admin-reels-grid { grid-template-columns:repeat(2,1fr); } }
+  @media(max-width:900px) {
+    nav { display:none; }
+    .menu-toggle { display:block; }
+    nav.mobile-open { display:flex; flex-direction:column; position:fixed; top:68px; left:0; right:0; background:var(--dark); border-bottom:1px solid var(--border); padding:16px 24px; gap:16px; z-index:999; }
+    .pgrid { grid-template-columns:repeat(2,1fr); }
+    .c-slide { height:370px; }
+    .c-arrow { width:38px; height:38px; font-size:1.4rem; }
+    .about-grid,.contact-grid,.ck-grid { grid-template-columns:1fr; }
+    .footer-top { grid-template-columns:1fr 1fr; }
+    .modal-inner { grid-template-columns:1fr; }
+    .modal-img { border-radius:16px 16px 0 0; min-height:210px; }
+    .cart-drawer { width:100%; right:-100%; }
+    .form-grid { grid-template-columns:1fr; }
+    .admin-nav { display:none; }
+    .admin-prod-grid { grid-template-columns:1fr 1fr; }
+  }
+  @media(max-width:600px) {
+    .footer-top { grid-template-columns:1fr; }
+    .c-slide { height:270px; }
+    .c-overlay { padding:0 18px; }
+    .c-title { font-size:2.1rem; }
+    .c-sub { display:none; }
+    .admin-prod-grid { grid-template-columns:1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="header-inner">
+    <a href="#home" class="brand">
+      <span class="brand-name">MODERN CLOTHES</span>
+      <span class="brand-tag">Style That Defines You</span>
+    </a>
+    <nav id="mainNav">
+      <a href="#home">Home</a>
+      <a href="#mens-wear">Men's Wear</a>
+      <a href="#style-reels">🎬 Drip Zone</a>
+      <a href="#watches-section">Watches</a>
+      <a href="#perfumes-section">Perfumes</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <button class="theme-toggle" id="themeToggle" onclick="toggleTheme()" title="Toggle Light/Dark Mode">🌙</button>
+      <button class="admin-link-btn" onclick="openAdminLogin()" title="Admin Panel">
+        <span class="adm-ico">⚙</span>
+        ADMIN
+        <span class="adm-dot"></span>
+      </button>
+      <button class="cart-btn" onclick="toggleCart()">🛒 Cart <span class="cart-count" id="cartCount">0</span></button>
+      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    </div>
+  </div>
+</header>
+
+<!-- CAROUSEL -->
+<section id="home" class="hero-section">
+  <div class="carousel-wrap" id="carouselWrap">
+    <div class="carousel-track" id="carouselTrack">
+      <div class="c-slide">
+        <img src="https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=1400&q=85" alt="Formal Shirts">
+        <div class="c-overlay">
+          <div class="c-content">
+            <div class="c-badge">👔 Shirt Season</div>
+            <h1 class="c-title">FORMAL.<br>CASUAL. <span>YOU.</span></h1>
+            <p class="c-sub">Oxford, Linen & Denim Shirts — From ₹599</p>
+            <div class="c-btns"><a href="#shirts-section" class="btn-gold">Shop Shirts →</a><a href="https://wa.me/919060738156" target="_blank" class="btn-outline">WhatsApp Order</a></div>
+          </div>
+        </div>
+      </div>
+      <div class="c-slide">
+        <img src="https://images.unsplash.com/photo-1523170335258-f5ed11844a49?w=1400&q=85" alt="Watches">
+        <div class="c-overlay" style="background:linear-gradient(90deg,rgba(0,0,0,.85) 0%,rgba(13,27,42,.55) 60%,transparent 100%)">
+          <div class="c-content">
+            <div class="c-badge">⌚ Luxury Timepieces</div>
+            <h1 class="c-title">TIME TO<br><span>LOOK SHARP</span></h1>
+            <p class="c-sub">Premium watches — Analog, Digital & Smart styles</p>
+            <div class="c-btns"><a href="#watches-section" class="btn-gold">Shop Watches →</a></div>
+          </div>
+        </div>
+      </div>
+      <div class="c-slide">
+        <img src="https://images.unsplash.com/photo-1617137968427-85924c800a22?w=1400&q=85" alt="Men's Fashion">
+        <div class="c-overlay">
+          <div class="c-content">
+            <div class="c-badge">⚡ New Collection 2025</div>
+            <h1 class="c-title">DEFINE YOUR<br><span>STYLE</span> TODAY</h1>
+            <p class="c-sub">Premium Men's Fashion — Shirts, Jeans & More from Sugauli, Bihar</p>
+            <div class="c-btns"><a href="#shirts-section" class="btn-gold">Shop Shirts →</a><a href="#jeans-section" class="btn-outline">Shop Jeans</a></div>
+          </div>
+        </div>
+      </div>
+      <div class="c-slide">
+        <img src="https://images.unsplash.com/photo-1542272604-787c3835535d?w=1400&q=85" alt="Jeans">
+        <div class="c-overlay">
+          <div class="c-content">
+            <div class="c-badge">👖 Jeans Festival</div>
+            <h1 class="c-title">SLIM. CARGO.<br><span>BRANDED.</span></h1>
+            <p class="c-sub">All types of jeans for every vibe — Starting ₹849 only</p>
+            <div class="c-btns"><a href="#jeans-section" class="btn-gold">Explore Jeans →</a></div>
+          </div>
+        </div>
+      </div>
+      <div class="c-slide">
+        <img src="https://images.unsplash.com/photo-1551028719-00167b16eac5?w=1400&q=85" alt="Hoodies">
+        <div class="c-overlay">
+          <div class="c-content">
+            <div class="c-badge">🧥 Winter Special</div>
+            <h1 class="c-title">STAY WARM<br><span>STAY STYLISH</span></h1>
+            <p class="c-sub">Premium Hoodies & Jackets — Starting ₹1,299</p>
+            <div class="c-btns"><a href="#hoodies-section" class="btn-gold">Shop Now →</a></div>
+          </div>
+        </div>
+      </div>
+      <div class="c-slide">
+        <img src="https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=1400&q=85" alt="Perfumes">
+        <div class="c-overlay" style="background:linear-gradient(90deg,rgba(0,0,0,.88) 0%,rgba(20,5,5,.55) 60%,transparent 100%)">
+          <div class="c-content">
+            <div class="c-badge">🧴 Signature Fragrances</div>
+            <h1 class="c-title">SMELL LIKE<br>A <span>KING</span></h1>
+            <p class="c-sub">Long-lasting EDP & EDT fragrances — From ₹899</p>
+            <div class="c-btns"><a href="#perfumes-section" class="btn-gold">Shop Perfumes →</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="c-arrow c-prev" onclick="slidePrev()">&#8249;</button>
+    <button class="c-arrow c-next" onclick="slideNext()">&#8250;</button>
+    <div class="c-dots" id="carouselDots"></div>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stats-bar">
+  <div class="stats-inner">
+    <div class="stat"><div class="stat-num">500+</div><div class="stat-lbl">Products</div></div>
+    <div class="stat"><div class="stat-num">2K+</div><div class="stat-lbl">Happy Customers</div></div>
+    <div class="stat"><div class="stat-num">3+</div><div class="stat-lbl">Years in Business</div></div>
+    <div class="stat"><div class="stat-num">100%</div><div class="stat-lbl">Authentic Quality</div></div>
+  </div>
+</div>
+
+<!-- CATEGORY NAV -->
+<div class="cat-nav">
+  <div class="container">
+    <div class="cat-nav-in">
+      <a href="#jeans-section" class="cat-link"><span class="cat-ico">👖</span><span>Jeans</span></a>
+      <a href="#shirts-section" class="cat-link"><span class="cat-ico">👔</span><span>Shirts</span></a>
+      <a href="#tshirts-section" class="cat-link"><span class="cat-ico">👕</span><span>T-Shirts</span></a>
+      <a href="#hoodies-section" class="cat-link"><span class="cat-ico">🧥</span><span>Hoodies</span></a>
+      <a href="#watches-section" class="cat-link"><span class="cat-ico">⌚</span><span>Watches</span></a>
+      <a href="#perfumes-section" class="cat-link"><span class="cat-ico">🧴</span><span>Perfumes</span></a>
+      <a href="#style-reels" class="cat-link" style="color:var(--accent)"><span class="cat-ico">🎬</span><span>Drip Zone</span></a>
+    </div>
+  </div>
+</div>
+
+<!-- MEN'S WEAR -->
+<div id="mens-wear" style="background:var(--black);padding:56px 24px 0">
+  <div class="container">
+    <div class="sec-hdr">
+      <div class="sec-tag">— Exclusive Collection —</div>
+      <h2 class="sec-title">MEN'S WEAR</h2>
+      <p class="sec-desc">Curated fashion for the modern Indian man — style, comfort & value</p>
+    </div>
+  </div>
+</div>
+
+<!-- JEANS -->
+<section id="jeans-section" style="background:var(--black);padding:34px 24px 60px">
+  <div class="container">
+    <div class="sub-hdr"><div class="sub-left">
+      <div class="sub-ico">👖</div>
+      <div><div class="sec-tag" style="text-align:left">Men's Jeans</div><div class="sub-title">JEANS COLLECTION</div><div class="sub-desc">Slim, Cargo, Branded & more — jeans for every vibe</div></div>
+    </div></div>
+    <div class="sub-label"><span>Slim Fit Jeans</span></div>
+    <div class="pgrid" id="slim-jeans-grid"></div>
+    <div class="sub-label mt-40"><span>Cargo Jeans</span></div>
+    <div class="pgrid" id="cargo-jeans-grid"></div>
+    <div class="sub-label mt-40"><span>Branded Jeans</span></div>
+    <div class="pgrid" id="branded-jeans-grid"></div>
+  </div>
+</section>
+
+<!-- SHIRTS -->
+<section id="shirts-section" style="background:var(--dark);padding:58px 24px">
+  <div class="container">
+    <div class="sub-hdr"><div class="sub-left">
+      <div class="sub-ico">👔</div>
+      <div><div class="sec-tag" style="text-align:left">Men's Shirts</div><div class="sub-title">SHIRTS COLLECTION</div><div class="sub-desc">Formal, casual & printed shirts for every occasion</div></div>
+    </div></div>
+    <div class="sub-label"><span>Formal Shirts</span></div>
+    <div class="pgrid" id="formal-shirts-grid"></div>
+    <div class="sub-label mt-40"><span>Casual & Printed Shirts</span></div>
+    <div class="pgrid" id="casual-shirts-grid"></div>
+  </div>
+</section>
+
+<!-- T-SHIRTS -->
+<section id="tshirts-section" style="background:var(--black);padding:58px 24px">
+  <div class="container">
+    <div class="sub-hdr"><div class="sub-left">
+      <div class="sub-ico">👕</div>
+      <div><div class="sec-tag" style="text-align:left">Men's T-Shirts</div><div class="sub-title">T-SHIRTS COLLECTION</div><div class="sub-desc">Polo, graphic, oversized & plain tees for every day</div></div>
+    </div></div>
+    <div class="pgrid" id="tshirts-grid"></div>
+  </div>
+</section>
+
+<!-- HOODIES -->
+<section id="hoodies-section" style="background:var(--dark);padding:58px 24px">
+  <div class="container">
+    <div class="sub-hdr"><div class="sub-left">
+      <div class="sub-ico">🧥</div>
+      <div><div class="sec-tag" style="text-align:left">Men's Hoodies & Jackets</div><div class="sub-title">HOODIES & JACKETS</div><div class="sub-desc">Stay warm, stay stylish this season</div></div>
+    </div></div>
+    <div class="pgrid" id="hoodies-grid"></div>
+  </div>
+</section>
+
+<!-- WATCHES -->
+<section id="watches-section" style="background:var(--navy);padding:58px 24px">
+  <div class="container">
+    <div class="sub-hdr"><div class="sub-left">
+      <div class="sub-ico">⌚</div>
+      <div><div class="sec-tag" style="text-align:left">Men's Watches</div><div class="sub-title">WATCHES COLLECTION</div><div class="sub-desc">Luxury, sports & vintage — timepieces that speak</div></div>
+    </div></div>
+    <div class="sub-label"><span>Luxury & Analog Watches</span></div>
+    <div class="pgrid" id="luxury-watches-grid"></div>
+    <div class="sub-label mt-40"><span>Sports & Digital Watches</span></div>
+    <div class="pgrid" id="sports-watches-grid"></div>
+  </div>
+</section>
+
+<!-- PERFUMES -->
+<section id="perfumes-section" style="background:var(--black);padding:58px 24px">
+  <div class="container">
+    <div class="sub-hdr"><div class="sub-left">
+      <div class="sub-ico">🧴</div>
+      <div><div class="sec-tag" style="text-align:left">Men's Perfumes</div><div class="sub-title">PERFUMES COLLECTION</div><div class="sub-desc">Long-lasting fragrances for every mood</div></div>
+    </div></div>
+    <div class="pgrid" id="perfumes-grid"></div>
+  </div>
+</section>
+
+<!-- STYLE REELS -->
+<section id="style-reels">
+  <div class="container">
+    <div class="reels-hdr">
+      <div class="reels-section-badge"><span class="pulse"></span> DRIP ZONE</div>
+      <h2 class="reels-title">STYLE <em>REELS</em></h2>
+      <p class="reels-subtitle">Watch our latest looks in action — tap to explore, order instantly</p>
+    </div>
+    <div class="reels-outer">
+      <button class="reels-arrow left" onclick="scrollReels(-1)">&#8249;</button>
+      <div class="reels-track-wrap" id="reelsTrackWrap">
+        <div class="reels-track" id="reelsTrack">
+          <!-- Injected by JS -->
+        </div>
+      </div>
+      <button class="reels-arrow right" onclick="scrollReels(1)">&#8250;</button>
+    </div>
+  </div>
+</section>
+
+<!-- REEL LIGHTBOX -->
+<div class="reel-lightbox" id="reelLightbox" onclick="closeReelLightbox(event)">
+  <div class="reel-lb-inner" id="reelLbInner">
+    <button class="reel-lb-close" onclick="closeReelLightboxBtn()">✕</button>
+    <div id="reelLbMedia"></div>
+    <div class="reel-lb-info">
+      <div class="reel-lb-name" id="reelLbName"></div>
+      <div class="reel-lb-price" id="reelLbPrice"></div>
+    </div>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-card">
+        <div class="about-ico">👑</div>
+        <div class="about-owner">RAJ</div>
+        <div class="about-loc">📍 Sugauli, Bihar, India</div>
+        <div style="margin-top:20px;padding-top:20px;border-top:1px solid rgba(255,255,255,.08);color:var(--grey);font-size:.83rem;line-height:1.9">
+          Passionate about men's fashion<br>Serving quality since 2022<br>
+          <span style="color:var(--accent)">Modern Clothes</span> — your local fashion brand
+        </div>
+      </div>
+      <div class="about-txt">
+        <div class="sec-tag">— Our Story —</div>
+        <h2>ABOUT<br>MODERN CLOTHES</h2>
+        <p>Founded by <span class="hl">Raj</span>, Modern Clothes is Sugauli's premier destination for men's fashion. We believe every man deserves to look and feel his best, no matter the occasion.</p>
+        <p>Located in the heart of <span class="hl">Sugauli, Bihar</span>, our store brings the latest trends in men's clothing, accessories, and fragrances directly to you — at prices that make sense.</p>
+        <p>From crisp shirts to premium watches, from jeans to signature perfumes — we stock it all. Our commitment: <span class="hl">quality that lasts, style that speaks.</span></p>
+        <div style="margin-top:24px"><a href="https://wa.me/919060738156" target="_blank" class="btn-gold">Chat With Raj 💬</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="container">
+    <div class="sec-hdr">
+      <div class="sec-tag">— Get In Touch —</div>
+      <h2 class="sec-title">CONTACT US</h2>
+      <p class="sec-desc">We're here to help. Reach us anytime.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-cards">
+        <div class="ccard"><div class="cico">📞</div><div><div class="clbl">Phone</div><div class="cval"><a href="tel:+919060738156">+91 90607 38156</a></div></div></div>
+        <div class="ccard"><div class="cico">💬</div><div><div class="clbl">WhatsApp</div><div class="cval"><a href="https://wa.me/919060738156" target="_blank">Chat on WhatsApp</a></div></div></div>
+        <div class="ccard"><div class="cico">📍</div><div><div class="clbl">Location</div><div class="cval">Sugauli, East Champaran<br>Bihar – 845456, India</div></div></div>
+        <div class="ccard"><div class="cico">🕐</div><div><div class="clbl">Store Hours</div><div class="cval">Mon–Sat: 9AM – 9PM<br>Sunday: 10AM – 7PM</div></div></div>
+        <div class="map-wrap">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d56869.14!2d84.7491!3d26.7572!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3993e2b849cf6ca9%3A0x3c4b7b1d3e00de13!2sSugauli%2C%20Bihar!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" frameborder="0" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+      <div class="cform">
+        <h3>SEND A MESSAGE</h3>
+        <form id="contactForm" action="https://formspree.io/f/mbdbvpbg" method="POST">
+          <div class="fg"><label>Your Name</label><input type="text" name="name" placeholder="Enter your name" required></div>
+          <div class="fg"><label>Phone Number</label><input type="tel" name="phone" placeholder="+91 XXXXX XXXXX" required></div>
+          <div class="fg"><label>Email Address</label><input type="email" name="email" placeholder="your@email.com" required></div>
+          <div class="fg"><label>Interested In</label>
+            <select name="category" required>
+              <option value="">Select Category</option>
+              <option>Slim Fit Jeans</option><option>Cargo Jeans</option><option>Branded Jeans</option>
+              <option>Formal Shirts</option><option>Casual Shirts</option><option>T-Shirts</option>
+              <option>Hoodies & Jackets</option><option>Watches</option><option>Perfumes</option>
+              <option>General Inquiry</option>
+            </select>
+          </div>
+          <div class="fg"><label>Message</label><textarea name="message" placeholder="Tell us what you're looking for..." required></textarea></div>
+          <button type="submit" class="submit-btn">📧 Send Message</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CHECKOUT -->
+<section id="checkout">
+  <div class="container">
+    <div class="sec-hdr">
+      <div class="sec-tag">— Almost There —</div>
+      <h2 class="sec-title">CHECKOUT</h2>
+    </div>
+    <div class="ck-grid">
+      <div class="ck-form">
+        <h2>Delivery Details</h2>
+        <div class="fg"><label>Full Name</label><input type="text" placeholder="Your full name" id="ckName"></div>
+        <div class="fg"><label>Phone Number</label><input type="tel" placeholder="+91 XXXXX XXXXX" id="ckPhone"></div>
+        <div class="fg"><label>Full Address</label><textarea placeholder="House no., Street, Village/City..." id="ckAddress"></textarea></div>
+        <div class="fg"><label>PIN Code</label><input type="text" placeholder="6-digit PIN code" id="ckPin"></div>
+        <div class="fg"><label>Payment Method</label>
+          <select id="ckPay"><option>Cash on Delivery (COD)</option><option>UPI / PhonePe / GPay</option><option>Bank Transfer</option></select>
+        </div>
+        <button class="submit-btn" onclick="placeOrder()">✅ Place Order via WhatsApp</button>
+      </div>
+      <div class="ord-sum">
+        <h3>ORDER SUMMARY</h3>
+        <div id="ckItems"></div>
+        <div class="ord-total"><span>Total</span><span class="ord-price" id="ckTotal">₹0</span></div>
+        <div style="margin-top:13px;padding:11px;background:rgba(232,160,32,.07);border:1px solid rgba(232,160,32,.2);border-radius:6px;font-size:.79rem;color:var(--grey)">
+          Order confirmed via WhatsApp. Raj will contact you shortly.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-in">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="brand-name">MODERN CLOTHES</div>
+        <p>Your trusted men's fashion destination in Sugauli, Bihar. Quality clothes, watches & perfumes for the modern man.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <a href="#home">Home</a><a href="#mens-wear">Men's Wear</a><a href="#about">About Us</a><a href="#contact">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h4>Categories</h4>
+        <a href="#jeans-section">Jeans</a><a href="#shirts-section">Shirts</a><a href="#watches-section">Watches</a><a href="#perfumes-section">Perfumes</a>
+      </div>
+    </div>
+    <div class="footer-btm">© 2025 Modern Clothes, Sugauli, Bihar | Owned by Raj | All rights reserved</div>
+  </div>
+</footer>
+
+<a href="https://wa.me/919060738156?text=Hi%20Raj!%20I%20want%20to%20shop%20from%20Modern%20Clothes" target="_blank" class="wa-float">💬</a>
+
+<!-- CART DRAWER -->
+<div class="cart-drawer" id="cartDrawer">
+  <div class="cart-hdr"><h3>YOUR CART</h3><button class="cart-cls" onclick="toggleCart()">✕</button></div>
+  <div class="cart-body" id="cartBody"><div class="cart-empty"><div style="font-size:3rem;margin-bottom:10px">🛒</div><p>Your cart is empty</p></div></div>
+  <div class="cart-ftr" id="cartFtr" style="display:none">
+    <div class="cart-total"><span class="cart-total-lbl">Total</span><span class="cart-total-val" id="cartTotal">₹0</span></div>
+    <button class="btn-gold" style="width:100%;padding:13px;border-radius:6px;font-size:.9rem" onclick="goToCheckout()">Proceed to Checkout</button>
+    <br><br>
+    <a href="https://wa.me/919060738156?text=Hi!%20I%20want%20to%20place%20an%20order" target="_blank" class="btn-green">💬 Order via WhatsApp</a>
+  </div>
+</div>
+
+<!-- PRODUCT MODAL -->
+<div class="modal-overlay" id="modalOverlay" onclick="closeMBg(event)">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal()">✕</button>
+    <div class="modal-inner">
+      <div class="modal-img" id="mImg"></div>
+      <div class="modal-det">
+        <div class="modal-cat" id="mCat"></div>
+        <div class="modal-name" id="mName"></div>
+        <div class="modal-price" id="mPrice"></div>
+        <div class="modal-desc" id="mDesc"></div>
+        <div class="modal-btns">
+          <button class="btn-gold" style="width:100%;padding:13px;border-radius:6px" id="mAddCart">🛒 Add to Cart</button>
+          <a class="btn-green" id="mWA" target="_blank">💬 Order on WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- TOAST -->
+<div class="toast" id="toast"></div>
+
+<!-- ==================== ADMIN LOGIN MODAL ==================== -->
+<div class="admin-login-overlay" id="adminLoginOverlay">
+  <div class="admin-login-box">
+    <div class="admin-login-ico">🔐</div>
+    <h2>ADMIN LOGIN</h2>
+    <p>Enter your credentials to access the admin panel</p>
+    <div class="fg"><label>Username</label><input type="text" id="adminUser" placeholder="Enter username" onkeydown="if(event.key==='Enter')doAdminLogin()"></div>
+    <div class="fg" style="margin-top:12px"><label>Password</label><input type="password" id="adminPass" placeholder="Enter password" onkeydown="if(event.key==='Enter')doAdminLogin()"></div>
+    <div class="admin-login-err" id="adminLoginErr">❌ Wrong username or password</div>
+    <button class="btn-admin-save" style="width:100%;justify-content:center;margin-top:18px;padding:13px" onclick="doAdminLogin()">🔓 Login to Admin Panel</button>
+    <button onclick="closeAdminLogin()" style="background:none;border:none;color:var(--grey);cursor:pointer;font-family:'Outfit',sans-serif;font-size:.82rem;margin-top:14px;display:block;width:100%">Cancel</button>
+  </div>
+</div>
+
+<!-- ==================== ADMIN PANEL ==================== -->
+<div id="admin-panel">
+  <div class="admin-header">
+    <div>
+      <div style="font-family:'Bebas Neue',sans-serif;font-size:1.6rem;letter-spacing:4px;color:var(--accent)">ADMIN LOGIN</div>
+    </div>
+    <div class="admin-nav" id="adminNavBtns">
+      <button class="admin-tab active" onclick="switchAdminTab('dashboard')">📊 Dashboard</button>
+      <button class="admin-tab" onclick="switchAdminTab('add')">➕ Add Product</button>
+      <button class="admin-tab" onclick="switchAdminTab('manage')">📦 Manage Products</button>
+      <button class="admin-tab" onclick="switchAdminTab('reels')">🎬 Style Reels</button>
+    </div>
+    <button class="admin-close-btn" onclick="closeAdminPanel()">✕ Exit Admin</button>
+  </div>
+
+  <div class="admin-body">
+
+    <!-- DASHBOARD TAB -->
+    <div class="admin-tab-content active" id="tab-dashboard">
+      <div class="admin-section-title">📊 Dashboard <span>Overview</span></div>
+      <div class="admin-stats" id="adminStatsGrid"></div>
+      <div class="admin-section-title" style="margin-top:32px">🆕 Recently Added Products <span>Custom</span></div>
+      <div class="admin-prod-grid" id="recentProdsGrid"></div>
+    </div>
+
+    <!-- ADD PRODUCT TAB -->
+    <div class="admin-tab-content" id="tab-add">
+      <div class="admin-section-title">➕ Add New Product <span>To Store</span></div>
+      <div class="add-product-form">
+        <div class="form-grid">
+          <div class="admin-fg">
+            <label>Product Name *</label>
+            <input type="text" id="np-name" placeholder="e.g. Classic Dark Slim Jeans">
+          </div>
+          <div class="admin-fg">
+            <label>Category / Section *</label>
+            <select id="np-section">
+              <option value="">— Select Section —</option>
+              <option value="slimJeans">Slim Fit Jeans</option>
+              <option value="cargoJeans">Cargo Jeans</option>
+              <option value="brandedJeans">Branded Jeans</option>
+              <option value="formalShirts">Formal Shirts</option>
+              <option value="casualShirts">Casual & Printed Shirts</option>
+              <option value="tshirts">T-Shirts</option>
+              <option value="hoodies">Hoodies & Jackets</option>
+              <option value="luxuryWatches">Luxury & Analog Watches</option>
+              <option value="sportsWatches">Sports & Digital Watches</option>
+              <option value="perfumes">Perfumes</option>
+            </select>
+          </div>
+          <div class="admin-fg">
+            <label>Selling Price (₹) *</label>
+            <input type="number" id="np-price" placeholder="e.g. 999" min="1">
+          </div>
+          <div class="admin-fg">
+            <label>Original / MRP (₹) — for strikethrough</label>
+            <input type="number" id="np-old" placeholder="e.g. 1799 (optional)" min="0">
+          </div>
+        </div>
+        <div class="admin-fg" style="margin-top:18px">
+          <label>Product Description *</label>
+          <textarea id="np-desc" placeholder="Describe the product — fabric, features, sizing, etc."></textarea>
+        </div>
+        <div style="margin-top:18px">
+          <label style="display:block;font-size:.79rem;color:var(--grey);margin-bottom:8px;font-weight:500">Badge / Label</label>
+          <div class="badge-picker" id="badgePicker">
+            <button class="badge-opt" onclick="selectBadge(this,'')">None</button>
+            <button class="badge-opt" onclick="selectBadge(this,'New')">New</button>
+            <button class="badge-opt" onclick="selectBadge(this,'Bestseller')">Bestseller</button>
+            <button class="badge-opt" onclick="selectBadge(this,'Trending')">Trending</button>
+            <button class="badge-opt" onclick="selectBadge(this,'Popular')">Popular</button>
+            <button class="badge-opt" onclick="selectBadge(this,'Premium')">Premium</button>
+            <button class="badge-opt" onclick="selectBadge(this,'Exclusive')">Exclusive</button>
+            <button class="badge-opt" onclick="selectBadge(this,'Sale')">Sale</button>
+            <button class="badge-opt" onclick="selectBadge(this,'Limited')">Limited</button>
+          </div>
+          <input type="hidden" id="np-badge" value="">
+        </div>
+        <div style="margin-top:22px">
+          <label style="display:block;font-size:.79rem;color:var(--grey);margin-bottom:8px;font-weight:500">Product Image *</label>
+          <div class="img-upload-area" id="uploadArea" onclick="document.getElementById('np-img-file').click()">
+            <input type="file" id="np-img-file" accept="image/*" onchange="handleImgUpload(this)" style="display:none">
+            <div class="img-upload-ico">📸</div>
+            <div class="img-upload-txt"><strong>Click to upload</strong> or drag & drop<br><small style="color:var(--grey)">JPG, PNG, WEBP — max 5MB</small></div>
+            <img id="np-img-preview" class="img-preview" alt="Preview">
+          </div>
+          <div class="img-or">OR paste image URL below</div>
+          <input type="text" id="np-img-url" placeholder="https://images.unsplash.com/..." style="width:100%;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:8px;padding:11px 14px;color:#fff;font-family:'Outfit',sans-serif;font-size:.87rem;outline:none;" oninput="previewFromUrl(this.value)">
+        </div>
+        <div class="form-actions">
+          <button class="btn-admin-save" onclick="addNewProduct()">💾 Save & Publish Product</button>
+          <button class="btn-admin-reset" onclick="resetAddForm()">🗑 Reset Form</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- MANAGE PRODUCTS TAB -->
+    <div class="admin-tab-content" id="tab-manage">
+      <div class="admin-section-title">📦 Manage Products <span>All</span></div>
+      <div class="prod-mgmt-filters">
+        <input type="text" class="search-input" id="mgmtSearch" placeholder="🔍 Search products..." oninput="renderManageGrid()">
+        <select class="filter-select" id="mgmtFilter" onchange="renderManageGrid()">
+          <option value="">All Categories</option>
+          <option value="slimJeans">Slim Fit Jeans</option>
+          <option value="cargoJeans">Cargo Jeans</option>
+          <option value="brandedJeans">Branded Jeans</option>
+          <option value="formalShirts">Formal Shirts</option>
+          <option value="casualShirts">Casual Shirts</option>
+          <option value="tshirts">T-Shirts</option>
+          <option value="hoodies">Hoodies & Jackets</option>
+          <option value="luxuryWatches">Luxury Watches</option>
+          <option value="sportsWatches">Sports Watches</option>
+          <option value="perfumes">Perfumes</option>
+        </select>
+        <select class="filter-select" id="mgmtStatus" onchange="renderManageGrid()">
+          <option value="">All Status</option>
+          <option value="available">Available</option>
+          <option value="unavailable">Unavailable</option>
+          <option value="custom">Custom Added</option>
+        </select>
+      </div>
+      <div class="admin-prod-grid" id="manageProdsGrid"></div>
+    </div>
+
+    <!-- REELS TAB -->
+    <div class="admin-tab-content" id="tab-reels">
+      <div class="admin-section-title">🎬 Style Reels <span>DRIP ZONE</span></div>
+
+      <!-- Add Reel Form -->
+      <div class="reel-add-form" style="margin-bottom:32px">
+        <div style="font-family:'Bebas Neue',sans-serif;font-size:1.2rem;letter-spacing:2px;color:var(--accent);margin-bottom:18px">➕ Upload New Reel / Short Video</div>
+        <div class="reel-upload-area" id="reelUploadArea" onclick="document.getElementById('reel-file-input').click()">
+          <input type="file" id="reel-file-input" accept="video/*,image/*" onchange="handleReelUpload(this)" style="display:none">
+          <div class="reel-upload-ico">🎬</div>
+          <div class="reel-upload-txt"><strong>Click to upload</strong> video or photo<br><small style="color:var(--grey)">MP4, MOV, WEBM, JPG, PNG — max 50MB</small></div>
+          <div class="reel-media-preview" id="reelMediaPreview"></div>
+        </div>
+        <div class="img-or">OR paste video / image URL</div>
+        <input type="text" id="reel-url-input" placeholder="https://... video or image URL" style="width:100%;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:8px;padding:11px 14px;color:#fff;font-family:'Outfit',sans-serif;font-size:.87rem;outline:none;margin-bottom:16px" oninput="previewReelFromUrl(this.value)">
+        <div class="form-grid" style="margin-bottom:16px">
+          <div class="admin-fg">
+            <label>Reel Title / Look Name *</label>
+            <input type="text" id="reel-title" placeholder="e.g. Monsoon Casual Look">
+          </div>
+          <div class="admin-fg">
+            <label>Category Tag</label>
+            <select id="reel-cat">
+              <option value="Slim Jeans">Slim Jeans</option>
+              <option value="Cargo Jeans">Cargo Jeans</option>
+              <option value="Formal Shirts">Formal Shirts</option>
+              <option value="Casual Shirts">Casual Shirts</option>
+              <option value="T-Shirts">T-Shirts</option>
+              <option value="Hoodies">Hoodies</option>
+              <option value="Watches">Watches</option>
+              <option value="Perfumes">Perfumes</option>
+              <option value="Full Outfit">Full Outfit</option>
+            </select>
+          </div>
+          <div class="admin-fg">
+            <label>Price Tag (₹) — optional</label>
+            <input type="number" id="reel-price" placeholder="e.g. 1499">
+          </div>
+          <div class="admin-fg">
+            <label>WhatsApp Order Link (optional)</label>
+            <input type="text" id="reel-wa" placeholder="https://wa.me/91XXXXXXXXXX?text=...">
+          </div>
+        </div>
+        <div class="form-actions">
+          <button class="btn-admin-save" onclick="addReel()">🎬 Publish Reel</button>
+          <button class="btn-admin-reset" onclick="resetReelForm()">🗑 Reset</button>
+        </div>
+      </div>
+
+      <!-- Existing Reels -->
+      <div class="admin-section-title" style="margin-bottom:14px">📋 Published Reels <span id="reelCountBadge">0</span></div>
+      <div class="admin-reels-grid" id="adminReelsGrid">
+        <div class="admin-empty" style="grid-column:1/-1"><div class="ico">🎬</div><p>No reels yet. Upload your first look!</p></div>
+      </div>
+    </div>
+
+  </div><!-- /admin-body -->
+</div><!-- /admin-panel -->
+
+<!-- EDIT PRODUCT MODAL -->
+<div class="edit-modal-overlay" id="editModalOverlay">
+  <div class="edit-modal">
+    <h3>✏️ EDIT PRODUCT</h3>
+    <input type="hidden" id="edit-id">
+    <div class="form-grid">
+      <div class="admin-fg"><label>Product Name</label><input type="text" id="edit-name"></div>
+      <div class="admin-fg"><label>Category</label>
+        <select id="edit-section">
+          <option value="slimJeans">Slim Fit Jeans</option>
+          <option value="cargoJeans">Cargo Jeans</option>
+          <option value="brandedJeans">Branded Jeans</option>
+          <option value="formalShirts">Formal Shirts</option>
+          <option value="casualShirts">Casual Shirts</option>
+          <option value="tshirts">T-Shirts</option>
+          <option value="hoodies">Hoodies & Jackets</option>
+          <option value="luxuryWatches">Luxury Watches</option>
+          <option value="sportsWatches">Sports Watches</option>
+          <option value="perfumes">Perfumes</option>
+        </select>
+      </div>
+      <div class="admin-fg"><label>Price (₹)</label><input type="number" id="edit-price"></div>
+      <div class="admin-fg"><label>MRP (₹)</label><input type="number" id="edit-old"></div>
+    </div>
+    <div class="admin-fg" style="margin-top:16px"><label>Description</label><textarea id="edit-desc"></textarea></div>
+    <div class="admin-fg" style="margin-top:16px"><label>Image URL</label><input type="text" id="edit-img"></div>
+    <div class="admin-fg" style="margin-top:16px"><label>Badge</label><input type="text" id="edit-badge" placeholder="e.g. New, Popular, Premium..."></div>
+    <div class="form-actions" style="margin-top:22px">
+      <button class="btn-admin-save" onclick="saveEditProduct()">💾 Save Changes</button>
+      <button class="btn-admin-reset" onclick="closeEditModal()">Cancel</button>
+    </div>
+  </div>
+</div>
+
+<!-- DELETE CONFIRM DIALOG -->
+<div class="confirm-overlay" id="confirmOverlay">
+  <div class="confirm-box">
+    <div class="ico">🗑️</div>
+    <h3>DELETE PRODUCT?</h3>
+    <p id="confirmMsg">Are you sure you want to permanently delete this product? This cannot be undone.</p>
+    <div class="confirm-actions">
+      <button class="btn-confirm-del" id="confirmDelBtn">Yes, Delete</button>
+      <button class="btn-confirm-cancel" onclick="closeConfirm()">Cancel</button>
+    </div>
+  </div>
+</div>
+
+<script>
+/* ====================================================
+   THEME TOGGLE
+==================================================== */
+function toggleTheme() {
+  document.body.classList.toggle('light-mode');
+  const t = document.getElementById('themeToggle');
+  const isLight = document.body.classList.contains('light-mode');
+  localStorage.setItem('theme', isLight ? 'light' : 'dark');
+  t.textContent = isLight ? '☀️' : '🌙';
+}
+window.addEventListener('DOMContentLoaded', () => {
+  if (localStorage.getItem('theme') === 'light') {
+    document.body.classList.add('light-mode');
+    document.getElementById('themeToggle').textContent = '☀️';
+  }
+});
+
+/* ====================================================
+   BASE PRODUCT DATA
+==================================================== */
+const BASE_PRODUCTS = {
+  slimJeans:[
+    {id:1,cat:'Slim Jeans',name:'Classic Dark Slim Jeans',img:'https://images.unsplash.com/photo-1542272604-787c3835535d?w=600&q=80',price:999,old:1799,badge:'Bestseller',desc:'Dark wash slim-fit denim with stretch fabric for all-day comfort. Perfect for casual & semi-formal outings.'},
+    {id:2,cat:'Slim Jeans',name:'Black Slim Fit Denim',img:'https://images.unsplash.com/photo-1541099649105-f69ad21f3246?w=600&q=80',price:1099,old:1999,badge:'New',desc:'Jet black slim jeans with tapered leg — sharp, minimal, modern look for everyday wear.'},
+    {id:3,cat:'Slim Jeans',name:'Light Blue Stretch Jeans',img:'https://images.unsplash.com/photo-1604176354204-9268737828e4?w=600&q=80',price:849,old:1499,badge:'',desc:'Light blue everyday slim jeans. Comfortable stretch fabric with a clean finish.'},
+    {id:4,cat:'Slim Jeans',name:'Indigo Raw Denim Slim',img:'https://images.unsplash.com/photo-1475178626620-a4d074967452?w=600&q=80',price:1149,old:1999,badge:'New',desc:'Raw indigo slim-fit denim with selvedge finish — premium quality for the denim connoisseur.'},
+    {id:5,cat:'Slim Jeans',name:'Grey Slim Taper Jeans',img:'https://images.unsplash.com/photo-1598522325074-042db73aa4e6?w=600&q=80',price:949,old:1699,badge:'Popular',desc:'Heather grey tapered slim jeans — versatile for office or casual outings.'},
+    {id:6,cat:'Slim Jeans',name:'Mid-Rise Slim Denim',img:'https://images.unsplash.com/photo-1555689502-c4b22d76c56f?w=600&q=80',price:899,old:1599,badge:'',desc:'Classic mid-rise slim denim with 2% elastane for perfect stretch and shape retention.'},
+    {id:7,cat:'Slim Jeans',name:'Acid Wash Slim Jeans',img:'https://images.unsplash.com/photo-1581655353564-df123a1eb820?w=600&q=80',price:1049,old:1799,badge:'Trending',desc:'Bold acid wash finish slim jeans — edgy street style for those who dare to stand out.'},
+    {id:8,cat:'Slim Jeans',name:'Vintage Faded Slim Cut',img:'https://images.unsplash.com/photo-1473966968600-fa801b869a1a?w=600&q=80',price:999,old:1699,badge:'',desc:'Vintage-faded slim cut with subtle distressing — retro vibes with modern fit.'},
+  ],
+  cargoJeans:[
+    {id:9,cat:'Cargo Jeans',name:'Military Cargo Denim',img:'https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?w=600&q=80',price:1299,old:2199,badge:'Trending',desc:'6-pocket cargo jeans with utility loops and reinforced stitching. Rugged yet stylish.'},
+    {id:10,cat:'Cargo Jeans',name:'Dark Cargo Jogger Jeans',img:'https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=600&q=80',price:1149,old:1999,badge:'Popular',desc:'Cargo-style jogger denim with elastic cuffs — perfect street-ready comfort.'},
+    {id:11,cat:'Cargo Jeans',name:'Khaki Combat Cargo Jeans',img:'https://images.unsplash.com/photo-1542272604-787c3835535d?w=600&q=80',price:1199,old:2099,badge:'',desc:'Multi-pocket combat cargo — bold style meets everyday utility.'},
+    {id:12,cat:'Cargo Jeans',name:'Black Tactical Cargo',img:'https://images.unsplash.com/photo-1548126032-079a0fb0099d?w=600&q=80',price:1349,old:2299,badge:'New',desc:'Black tactical cargo denim with zip pockets — urban warrior style for everyday missions.'},
+  ],
+  brandedJeans:[
+    {id:17,cat:'Branded Jeans',name:'Premium Branded Slim Denim',img:'https://images.unsplash.com/photo-1582552938357-32b906df40cb?w=600&q=80',price:2499,old:3999,badge:'Premium',desc:'Branded premium denim with signature detailing. Long-lasting fabric, superior cut.'},
+    {id:18,cat:'Branded Jeans',name:'Designer Distressed Jeans',img:'https://images.unsplash.com/photo-1604176354204-9268737828e4?w=600&q=80',price:2199,old:3499,badge:'Exclusive',desc:'Ripped distressed jeans — bold urban look with top-quality wash finish.'},
+    {id:19,cat:'Branded Jeans',name:'Luxury Straight Cut Jeans',img:'https://images.unsplash.com/photo-1542272604-787c3835535d?w=600&q=80',price:2799,old:4499,badge:'',desc:'Luxury straight-leg jeans with signature button fly. Timeless classic style.'},
+    {id:20,cat:'Branded Jeans',name:'Signature Dark Wash Jeans',img:'https://images.unsplash.com/photo-1541099649105-f69ad21f3246?w=600&q=80',price:2699,old:4299,badge:'New',desc:'Premium dark wash with branded rivets and custom patch — a collector-worthy piece of denim.'},
+  ],
+  formalShirts:[
+    {id:25,cat:'Formal Shirts',name:'Classic Oxford Shirt',img:'https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=600&q=80',price:799,old:1299,badge:'Bestseller',desc:'Premium cotton Oxford shirt for office and formal occasions. Crisp collar, tailored fit.'},
+    {id:26,cat:'Formal Shirts',name:'White Dress Shirt',img:'https://images.unsplash.com/photo-1620012253295-c15cc3e65df4?w=600&q=80',price:699,old:1199,badge:'',desc:'Classic white dress shirt — a wardrobe essential. Slim fit, wrinkle-resistant fabric.'},
+    {id:27,cat:'Formal Shirts',name:'Navy Blue Formal Shirt',img:'https://images.unsplash.com/photo-1607345366928-199ea26cfe3e?w=600&q=80',price:749,old:1299,badge:'New',desc:'Navy blue slim-fit formal shirt — perfect for office meetings and evening parties.'},
+    {id:28,cat:'Formal Shirts',name:'Charcoal Grey Formal',img:'https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=600&q=80',price:849,old:1399,badge:'Popular',desc:'Charcoal grey formal shirt with French placket — sophisticated choice for business meetings.'},
+  ],
+  casualShirts:[
+    {id:33,cat:'Casual Shirts',name:'Floral Printed Shirt',img:'https://images.unsplash.com/photo-1588359348347-9bc6cbbb689e?w=600&q=80',price:599,old:999,badge:'Trending',desc:'Vibrant floral printed shirt for vacations and casual outings. Light, breathable fabric.'},
+    {id:34,cat:'Casual Shirts',name:'Denim Casual Shirt',img:'https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=600&q=80',price:849,old:1499,badge:'',desc:'Rugged denim shirt with chest pockets — great for layering or solo wear.'},
+    {id:35,cat:'Casual Shirts',name:'Linen Summer Shirt',img:'https://images.unsplash.com/photo-1571945153237-4929e783af4a?w=600&q=80',price:649,old:1099,badge:'Summer Pick',desc:'Breathable linen shirt for hot Indian summers. Relaxed fit, looks great untucked.'},
+    {id:36,cat:'Casual Shirts',name:'Tie-Dye Casual Shirt',img:'https://images.unsplash.com/photo-1503341504253-dff4815485f1?w=600&q=80',price:549,old:899,badge:'New',desc:'Boho tie-dye shirt with relaxed silhouette — festival and beach-ready style statement.'},
+  ],
+  tshirts:[
+    {id:41,cat:'T-Shirts',name:'Polo T-Shirt – Navy',img:'https://images.unsplash.com/photo-1581655353564-df123a1eb820?w=600&q=80',price:499,old:899,badge:'New',desc:'Classic polo tee in navy — ideal for college, office or daily casual wear.'},
+    {id:42,cat:'T-Shirts',name:'Graphic Oversized Tee',img:'https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=600&q=80',price:399,old:699,badge:'Trending',desc:'Bold graphic oversized tee — 100% cotton, urban streetwear style for any occasion.'},
+    {id:43,cat:'T-Shirts',name:'Plain Round Neck Tee',img:'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=600&q=80',price:299,old:499,badge:'',desc:'Solid colour round neck tee in multiple shades. Simple, comfortable daily essential.'},
+    {id:44,cat:'T-Shirts',name:'Half-Sleeve Henley Tee',img:'https://images.unsplash.com/photo-1503341504253-dff4815485f1?w=600&q=80',price:449,old:799,badge:'Popular',desc:'Henley-collar tee with button placket. Stylish and breathable for warm weather.'},
+  ],
+  hoodies:[
+    {id:49,cat:'Hoodies',name:'Hoodie – Midnight Black',img:'https://images.unsplash.com/photo-1509942774463-acf339cf87d5?w=600&q=80',price:1299,old:2199,badge:'Premium',desc:'Soft-fleece pullover hoodie with kangaroo pocket. Warm, stylish, great for winters.'},
+    {id:50,cat:'Hoodies',name:'Zip-Up Hoodie – Grey',img:'https://images.unsplash.com/photo-1509942774463-acf339cf87d5?w=600&q=80',price:1499,old:2499,badge:'',desc:'Full-zip hoodie in heather grey. Versatile with soft inner lining — looks great anywhere.'},
+    {id:51,cat:'Jackets',name:'Quilted Winter Jacket',img:'https://images.unsplash.com/photo-1548126032-079a0fb0099d?w=600&q=80',price:1999,old:3499,badge:'Winter Special',desc:'Puffer quilted jacket — lightweight warmth ideal for cold Bihar winters.'},
+    {id:52,cat:'Hoodies',name:'Oversized Streetwear Hoodie',img:'https://images.unsplash.com/photo-1590330297626-d7aff25a0431?w=600&q=80',price:1399,old:2299,badge:'Trending',desc:'Oversized drop-shoulder hoodie with bold print — the statement piece for streetwear lovers.'},
+  ],
+  luxuryWatches:[
+    {id:57,cat:'Luxury Watches',name:'Executive Chronograph',img:'https://images.unsplash.com/photo-1523170335258-f5ed11844a49?w=600&q=80',price:3499,old:5999,badge:'Premium',desc:'Bold chronograph with stainless steel case, mineral glass & genuine leather strap. Water resistant 30m.'},
+    {id:58,cat:'Luxury Watches',name:'Vintage Analog Watch',img:'https://images.unsplash.com/photo-1547996160-81dfa63595aa?w=600&q=80',price:2199,old:3799,badge:'',desc:'Classic round dial vintage analog watch — slim profile, mesh bracelet, timeless elegance.'},
+    {id:59,cat:'Luxury Watches',name:'Gold Dial Dress Watch',img:'https://images.unsplash.com/photo-1612817288484-6f916006741a?w=600&q=80',price:2799,old:4500,badge:'Exclusive',desc:'Gold-toned dial dress watch with Roman numerals. Perfect for weddings and formal events.'},
+    {id:60,cat:'Luxury Watches',name:'Rose Gold Skeleton Watch',img:'https://images.unsplash.com/photo-1523170335258-f5ed11844a49?w=600&q=80',price:3999,old:6499,badge:'Luxury',desc:'Rose gold skeleton automatic watch — visible movement through sapphire glass for the watch enthusiast.'},
+  ],
+  sportsWatches:[
+    {id:65,cat:'Sports Watches',name:'Sports Digital Watch',img:'https://images.unsplash.com/photo-1508057198894-247b23fe5ade?w=600&q=80',price:1299,old:2499,badge:'Popular',desc:'Multi-function digital with backlight, stopwatch & alarm. Durable rubber strap for active men.'},
+    {id:66,cat:'Sports Watches',name:'Tactical Military Watch',img:'https://images.unsplash.com/photo-1551816230-ef5deaed4a26?w=600&q=80',price:1799,old:2999,badge:'New',desc:'Rugged military-style sport watch — shock resistant, 50m water resistant, dual time zone.'},
+    {id:67,cat:'Sports Watches',name:'Smart Fitness Watch',img:'https://images.unsplash.com/photo-1544117519-31a4b719223d?w=600&q=80',price:2499,old:3999,badge:'Smart',desc:'Fitness tracker with heart rate monitor, step counter and sleep tracker. Sleek & modern.'},
+    {id:68,cat:'Sports Watches',name:'Diver Sport Watch 50ATM',img:'https://images.unsplash.com/photo-1434493789847-2f02dc6ca35d?w=600&q=80',price:2199,old:3699,badge:'Premium',desc:'50ATM water-resistant diver watch with unidirectional bezel — built for underwater adventures.'},
+  ],
+  perfumes:[
+    {id:73,cat:'Perfumes',name:'Black Oud Eau de Parfum',img:'https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?w=600&q=80',price:1799,old:2999,badge:'Bestseller',desc:'Rich woody oud — sandalwood, musk & dark spices. 100ml EDP with 12+ hour lasting power.'},
+    {id:74,cat:'Perfumes',name:'Ocean Blue EDT',img:'https://images.unsplash.com/photo-1587017539504-67cfbddac569?w=600&q=80',price:999,old:1799,badge:'New',desc:'Fresh aquatic fragrance — sea salt, citrus & white musk. Perfect for daytime & summer.'},
+    {id:75,cat:'Perfumes',name:'Royal Tobacco Perfume',img:'https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?w=600&q=80',price:2299,old:3999,badge:'Premium',desc:'Sophisticated tobacco, vanilla & amber blend. A bold masculine scent for evenings.'},
+    {id:76,cat:'Perfumes',name:'Citrus Burst Sport EDT',img:'https://images.unsplash.com/photo-1619994403073-2cec844b8e63?w=600&q=80',price:899,old:1499,badge:'',desc:'Energizing citrus & cedarwood sport fragrance — fresh all day for gym & work.'},
+  ],
+};
+
+/* ====================================================
+   STATE MANAGEMENT
+   - customProducts: admin-added products (stored in localStorage)
+   - productOverrides: {id: {unavailable: true/false, edits...}} (stored in localStorage)
+==================================================== */
+let customProducts = {};   // section -> [products]
+let productOverrides = {}; // id -> {unavailable, name, price, old, desc, img, badge}
+
+function loadState() {
+  try {
+    customProducts = JSON.parse(localStorage.getItem('mc_custom') || '{}');
+    productOverrides = JSON.parse(localStorage.getItem('mc_overrides') || '{}');
+  } catch(e) { customProducts = {}; productOverrides = {}; }
+}
+
+function saveState() {
+  localStorage.setItem('mc_custom', JSON.stringify(customProducts));
+  localStorage.setItem('mc_overrides', JSON.stringify(productOverrides));
+}
+
+/* Get all products for a section (base + custom), merged with overrides */
+function getSectionProducts(section) {
+  const base = (BASE_PRODUCTS[section] || []).map(p => mergeOverride(p));
+  const custom = (customProducts[section] || []).map(p => mergeOverride(p));
+  return [...base, ...custom];
+}
+
+function mergeOverride(p) {
+  const ov = productOverrides[p.id];
+  if (!ov) return {...p};
+  return {...p, ...ov};
+}
+
+/* Get ALL products flat */
+function getAllProducts() {
+  const sections = Object.keys(BASE_PRODUCTS);
+  const customSections = Object.keys(customProducts);
+  const allSections = [...new Set([...sections, ...customSections])];
+  return allSections.flatMap(s => getSectionProducts(s));
+}
+
+function getProductById(id) {
+  return getAllProducts().find(p => String(p.id) === String(id));
+}
+
+/* ====================================================
+   PRODUCT RENDERING — STOREFRONT
+==================================================== */
+function buildProductCard(p) {
+  const unavail = p.unavailable;
+  return `
+    <div class="pcard${unavail ? ' unavailable' : ''}" onclick="${unavail ? '' : 'openModal(' + p.id + ')'}">
+      <div class="pimg">
+        ${p.badge ? `<div class="pbadge">${p.badge}</div>` : ''}
+        <img src="${p.img}" alt="${p.name}" loading="lazy" onerror="this.parentElement.style.background='#1a1f2a'">
+      </div>
+      <div class="pinfo">
+        <div class="pname">${p.name}</div>
+        <div class="pdesc">${p.desc.substring(0,70)}...</div>
+        <div class="pfooter">
+          <div class="pprice">₹${p.price.toLocaleString()}${p.old ? `<span>₹${p.old.toLocaleString()}</span>` : ''}</div>
+          <button class="padd" onclick="event.stopPropagation();${unavail ? '' : 'addToCart(' + p.id + ')'}" ${unavail ? 'disabled' : ''}>${unavail ? 'Sold Out' : '+ Add'}</button>
+        </div>
+      </div>
+    </div>`;
+}
+
+function rGrid(id, list) {
+  const el = document.getElementById(id);
+  if (!el) return;
+  const visible = list.filter(p => true); // show all including unavailable (with overlay)
+  el.innerHTML = visible.length ? visible.map(buildProductCard).join('') : '';
+}
+
+function initGrids() {
+  rGrid('slim-jeans-grid',     getSectionProducts('slimJeans'));
+  rGrid('cargo-jeans-grid',    getSectionProducts('cargoJeans'));
+  rGrid('branded-jeans-grid',  getSectionProducts('brandedJeans'));
+  rGrid('formal-shirts-grid',  getSectionProducts('formalShirts'));
+  rGrid('casual-shirts-grid',  getSectionProducts('casualShirts'));
+  rGrid('tshirts-grid',        getSectionProducts('tshirts'));
+  rGrid('hoodies-grid',        getSectionProducts('hoodies'));
+  rGrid('luxury-watches-grid', getSectionProducts('luxuryWatches'));
+  rGrid('sports-watches-grid', getSectionProducts('sportsWatches'));
+  rGrid('perfumes-grid',       getSectionProducts('perfumes'));
+}
+
+/* ====================================================
+   MODAL
+==================================================== */
+function openModal(id) {
+  const p = getProductById(id);
+  if (!p || p.unavailable) return;
+  document.getElementById('mImg').innerHTML = `<img src="${p.img}" alt="${p.name}" style="width:100%;height:100%;min-height:340px;object-fit:cover">`;
+  document.getElementById('mCat').textContent = p.cat;
+  document.getElementById('mName').textContent = p.name;
+  document.getElementById('mPrice').innerHTML = `₹${p.price.toLocaleString()}${p.old ? ` <span style="font-family:Outfit;font-size:.93rem;color:var(--grey);text-decoration:line-through;margin-left:7px">₹${p.old.toLocaleString()}</span>` : ''}`;
+  document.getElementById('mDesc').textContent = p.desc;
+  document.getElementById('mAddCart').onclick = () => { addToCart(id); closeModal(); };
+  document.getElementById('mWA').href = `https://wa.me/919060738156?text=Hi%20Raj!%20I%20want%20to%20order%20${encodeURIComponent(p.name)}%20for%20Rs.${p.price}`;
+  document.getElementById('modalOverlay').classList.add('open');
+}
+function closeModal() { document.getElementById('modalOverlay').classList.remove('open'); }
+function closeMBg(e) { if (e.target === document.getElementById('modalOverlay')) closeModal(); }
+
+/* ====================================================
+   CART
+==================================================== */
+let cart = [];
+
+function addToCart(id) {
+  const p = getProductById(id);
+  if (!p || p.unavailable) return;
+  const ex = cart.find(c => String(c.id) === String(id));
+  if (ex) ex.qty++; else cart.push({...p, qty:1});
+  updateCart();
+  showToast(`✅ ${p.name} added!`);
+}
+
+function removeFromCart(id) { cart = cart.filter(c => String(c.id) !== String(id)); updateCart(); }
+
+function updateCart() {
+  const count = cart.reduce((a,c) => a+c.qty, 0);
+  document.getElementById('cartCount').textContent = count;
+  const body = document.getElementById('cartBody');
+  const ftr = document.getElementById('cartFtr');
+  if (!cart.length) {
+    body.innerHTML = '<div class="cart-empty"><div style="font-size:3rem;margin-bottom:10px">🛒</div><p>Your cart is empty</p></div>';
+    ftr.style.display = 'none';
+  } else {
+    body.innerHTML = cart.map(c => `
+      <div class="citem">
+        <div style="width:52px;height:52px;border-radius:8px;overflow:hidden;flex-shrink:0;background:#0d1117">
+          <img src="${c.img}" alt="${c.name}" style="width:100%;height:100%;object-fit:cover">
+        </div>
+        <div class="citem-info">
+          <div class="citem-name">${c.name}</div>
+          <div class="citem-price">₹${c.price.toLocaleString()} × ${c.qty}</div>
+        </div>
+        <button class="citem-rm" onclick="removeFromCart(${c.id})">🗑</button>
+      </div>`).join('');
+    const total = cart.reduce((a,c) => a+c.price*c.qty, 0);
+    document.getElementById('cartTotal').textContent = `₹${total.toLocaleString()}`;
+    ftr.style.display = 'block';
+  }
+}
+
+function toggleCart() { document.getElementById('cartDrawer').classList.toggle('open'); }
+
+function goToCheckout() {
+  toggleCart();
+  const sec = document.getElementById('checkout');
+  sec.classList.add('visible');
+  sec.scrollIntoView({behavior:'smooth'});
+  const total = cart.reduce((a,c) => a+c.price*c.qty, 0);
+  document.getElementById('ckItems').innerHTML = cart.map(c => `<div class="ord-item"><span>${c.name} ×${c.qty}</span><span>₹${(c.price*c.qty).toLocaleString()}</span></div>`).join('');
+  document.getElementById('ckTotal').textContent = `₹${total.toLocaleString()}`;
+}
+
+function placeOrder() {
+  const name = document.getElementById('ckName').value || 'Customer';
+  const phone = document.getElementById('ckPhone').value;
+  const addr = document.getElementById('ckAddress').value;
+  const pin = document.getElementById('ckPin').value;
+  const pay = document.getElementById('ckPay').value;
+  const items = cart.map(c => `${c.name} x${c.qty}=Rs.${c.price*c.qty}`).join('%0A');
+  const total = cart.reduce((a,c) => a+c.price*c.qty, 0);
+  window.open(`https://wa.me/919060738156?text=Hi%20Raj!%20New%20Order:%0AName:%20${encodeURIComponent(name)}%0APhone:%20${phone}%0AAddr:%20${encodeURIComponent(addr)}%20PIN:${pin}%0APay:%20${encodeURIComponent(pay)}%0A%0AItems:%0A${items}%0A%0ATotal:%20Rs.${total}%0APlease%20confirm!`, '_blank');
+}
+
+/* ====================================================
+   CONTACT FORM
+==================================================== */
+document.addEventListener('DOMContentLoaded', function() {
+  const cf = document.getElementById('contactForm');
+  if (cf) {
+    cf.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const btn = cf.querySelector('.submit-btn');
+      const orig = btn.textContent;
+      btn.textContent = '⏳ Sending...';
+      btn.disabled = true;
+      fetch(cf.action, { method:'POST', body:new FormData(cf), headers:{'Accept':'application/json'} })
+        .then(r => {
+          showToast(r.ok ? '✅ Message sent! We will contact you soon.' : '❌ Error. Please try again.');
+          if (r.ok) cf.reset();
+          btn.textContent = orig; btn.disabled = false;
+        }).catch(() => { showToast('❌ Error. Please try again.'); btn.textContent = orig; btn.disabled = false; });
+    });
+  }
+});
+
+/* ====================================================
+   UI HELPERS
+==================================================== */
+function toggleMenu() { document.getElementById('mainNav').classList.toggle('mobile-open'); }
+document.querySelectorAll('#mainNav a').forEach(a => a.addEventListener('click', () => document.getElementById('mainNav').classList.remove('mobile-open')));
+
+function showToast(msg) {
+  const t = document.getElementById('toast');
+  t.textContent = msg; t.classList.add('show');
+  setTimeout(() => t.classList.remove('show'), 2600);
+}
+
+/* ====================================================
+   CAROUSEL
+==================================================== */
+(function(){
+  const wrap = document.getElementById('carouselWrap');
+  const track = document.getElementById('carouselTrack');
+  const dotsEl = document.getElementById('carouselDots');
+  const slides = track.querySelectorAll('.c-slide');
+  let cur = 0, timer = null, prog = null;
+  const GAP = 5000, TOTAL = slides.length;
+  if (!slides.length) return;
+  slides.forEach((_, i) => {
+    const d = document.createElement('button');
+    d.className = 'c-dot' + (i === 0 ? ' active' : '');
+    d.addEventListener('click', () => goTo(i));
+    dotsEl.appendChild(d);
+  });
+  slides[0].classList.add('active');
+  function goTo(n) {
+    slides[cur].classList.remove('active');
+    if (dotsEl.children[cur]) dotsEl.children[cur].classList.remove('active');
+    cur = ((n % TOTAL) + TOTAL) % TOTAL;
+    track.style.transform = `translateX(-${cur*100}%)`;
+    slides[cur].classList.add('active');
+    if (dotsEl.children[cur]) dotsEl.children[cur].classList.add('active');
+    resetProg();
+  }
+  window.slideNext = () => goTo(cur + 1);
+  window.slidePrev = () => goTo(cur - 1);
+  function startAuto() { timer = setInterval(() => goTo(cur+1), GAP); }
+  function stopAuto() { clearInterval(timer); }
+  function resetProg() {
+    stopAuto();
+    if (prog) prog.remove();
+    prog = document.createElement('div');
+    prog.className = 'c-progress';
+    wrap.appendChild(prog);
+    void prog.offsetWidth;
+    startAuto();
+  }
+  wrap.addEventListener('mouseenter', stopAuto);
+  wrap.addEventListener('mouseleave', () => { stopAuto(); startAuto(); });
+  let tx = 0;
+  track.addEventListener('touchstart', e => { tx = e.touches[0].clientX; stopAuto(); }, {passive:true});
+  track.addEventListener('touchend', e => {
+    const d = tx - e.changedTouches[0].clientX;
+    if (Math.abs(d) > 48) { d > 0 ? window.slideNext() : window.slidePrev(); } else startAuto();
+  });
+  resetProg();
+})();
+
+/* ====================================================
+   ADMIN: LOGIN
+   Credentials: admin / raj@2025
+==================================================== */
+const ADMIN_USER = 'admin';
+const ADMIN_PASS = 'raj@2025';
+
+function openAdminLogin() {
+  document.getElementById('adminLoginOverlay').classList.add('open');
+  document.getElementById('adminUser').focus();
+  document.getElementById('adminLoginErr').style.display = 'none';
+}
+
+function closeAdminLogin() {
+  document.getElementById('adminLoginOverlay').classList.remove('open');
+  document.getElementById('adminUser').value = '';
+  document.getElementById('adminPass').value = '';
+}
+
+function doAdminLogin() {
+  const u = document.getElementById('adminUser').value.trim();
+  const p = document.getElementById('adminPass').value.trim();
+  const err = document.getElementById('adminLoginErr');
+  if (u === ADMIN_USER && p === ADMIN_PASS) {
+    closeAdminLogin();
+    openAdminPanel();
+  } else {
+    err.style.display = 'block';
+    document.getElementById('adminPass').value = '';
+    document.getElementById('adminPass').focus();
+  }
+}
+
+/* ====================================================
+   ADMIN: PANEL OPEN/CLOSE
+==================================================== */
+function openAdminPanel() {
+  document.getElementById('admin-panel').classList.add('open');
+  document.body.style.overflow = 'hidden';
+  switchAdminTab('dashboard');
+  renderAdminDashboard();
+}
+
+function closeAdminPanel() {
+  document.getElementById('admin-panel').classList.remove('open');
+  document.body.style.overflow = '';
+  initGrids(); // refresh storefront
+}
+
+function switchAdminTab(tab) {
+  document.querySelectorAll('.admin-tab-content').forEach(el => el.classList.remove('active'));
+  document.querySelectorAll('.admin-tab').forEach(el => el.classList.remove('active'));
+  document.getElementById('tab-' + tab).classList.add('active');
+  const idx = ['dashboard','add','manage'].indexOf(tab);
+  const tabs = document.querySelectorAll('.admin-tab');
+  if (tabs[idx]) tabs[idx].classList.add('active');
+
+  if (tab === 'manage') renderManageGrid();
+  if (tab === 'dashboard') renderAdminDashboard();
+  if (tab === 'reels') { renderAdminReelsGrid(); updateReelCount(); }
+}
+
+/* ====================================================
+   ADMIN: DASHBOARD
+==================================================== */
+function renderAdminDashboard() {
+  const all = getAllProducts();
+  const custom = Object.values(customProducts).flat();
+  const unavail = all.filter(p => p.unavailable).length;
+  const total = all.length;
+
+  document.getElementById('adminStatsGrid').innerHTML = `
+    <div class="admin-stat-card"><div class="admin-stat-num">${total}</div><div class="admin-stat-lbl">Total Products</div></div>
+    <div class="admin-stat-card"><div class="admin-stat-num" style="color:#27ae60">${total - unavail}</div><div class="admin-stat-lbl">Available</div></div>
+    <div class="admin-stat-card"><div class="admin-stat-num" style="color:#e74c3c">${unavail}</div><div class="admin-stat-lbl">Unavailable</div></div>
+    <div class="admin-stat-card"><div class="admin-stat-num">${custom.length}</div><div class="admin-stat-lbl">Custom Added</div></div>
+  `;
+
+  const recent = [...custom].reverse().slice(0, 6);
+  const grid = document.getElementById('recentProdsGrid');
+  if (!recent.length) {
+    grid.innerHTML = '<div class="admin-empty"><div class="ico">📦</div><p>No custom products added yet.<br>Go to "Add Product" to add your first one!</p></div>';
+  } else {
+    grid.innerHTML = recent.map(p => buildAdminCard(mergeOverride(p), true)).join('');
+  }
+}
+
+/* ====================================================
+   ADMIN: ADD PRODUCT
+==================================================== */
+let selectedBadge = '';
+let uploadedImgData = ''; // base64
+
+function selectBadge(btn, val) {
+  document.querySelectorAll('.badge-opt').forEach(b => b.classList.remove('selected'));
+  btn.classList.add('selected');
+  selectedBadge = val;
+  document.getElementById('np-badge').value = val;
+}
+
+function handleImgUpload(input) {
+  const file = input.files[0];
+  if (!file) return;
+  if (file.size > 5 * 1024 * 1024) { showToast('❌ Image too large! Max 5MB'); return; }
+  const reader = new FileReader();
+  reader.onload = e => {
+    uploadedImgData = e.target.result;
+    const preview = document.getElementById('np-img-preview');
+    preview.src = uploadedImgData;
+    preview.style.display = 'block';
+    document.getElementById('np-img-url').value = '';
+    showToast('✅ Image uploaded!');
+  };
+  reader.readAsDataURL(file);
+}
+
+function previewFromUrl(url) {
+  if (!url) return;
+  uploadedImgData = '';
+  const preview = document.getElementById('np-img-preview');
+  preview.src = url;
+  preview.style.display = 'block';
+}
+
+function addNewProduct() {
+  const name = document.getElementById('np-name').value.trim();
+  const section = document.getElementById('np-section').value;
+  const price = parseInt(document.getElementById('np-price').value);
+  const old = parseInt(document.getElementById('np-old').value) || 0;
+  const desc = document.getElementById('np-desc').value.trim();
+  const badge = document.getElementById('np-badge').value;
+  const imgUrl = document.getElementById('np-img-url').value.trim();
+  const img = uploadedImgData || imgUrl;
+
+  // Validate
+  if (!name) { showToast('❌ Please enter product name'); return; }
+  if (!section) { showToast('❌ Please select a category'); return; }
+  if (!price || price < 1) { showToast('❌ Please enter valid price'); return; }
+  if (!desc) { showToast('❌ Please enter product description'); return; }
+  if (!img) { showToast('❌ Please upload image or enter image URL'); return; }
+
+  const sectionLabels = {
+    slimJeans:'Slim Jeans', cargoJeans:'Cargo Jeans', brandedJeans:'Branded Jeans',
+    formalShirts:'Formal Shirts', casualShirts:'Casual Shirts', tshirts:'T-Shirts',
+    hoodies:'Hoodies', luxuryWatches:'Luxury Watches', sportsWatches:'Sports Watches', perfumes:'Perfumes'
+  };
+
+  const newProd = {
+    id: 'c_' + Date.now(),
+    cat: sectionLabels[section] || section,
+    name, img, price, old: old || 0,
+    badge, desc,
+    isCustom: true,
+    unavailable: false
+  };
+
+  if (!customProducts[section]) customProducts[section] = [];
+  customProducts[section].push(newProd);
+  saveState();
+  initGrids();
+
+  showToast(`✅ "${name}" added to store!`);
+  resetAddForm();
+  setTimeout(() => switchAdminTab('manage'), 800);
+}
+
+function resetAddForm() {
+  document.getElementById('np-name').value = '';
+  document.getElementById('np-section').value = '';
+  document.getElementById('np-price').value = '';
+  document.getElementById('np-old').value = '';
+  document.getElementById('np-desc').value = '';
+  document.getElementById('np-img-url').value = '';
+  document.getElementById('np-img-file').value = '';
+  document.getElementById('np-img-preview').style.display = 'none';
+  document.querySelectorAll('.badge-opt').forEach(b => b.classList.remove('selected'));
+  document.getElementById('np-badge').value = '';
+  selectedBadge = '';
+  uploadedImgData = '';
+}
+
+/* ====================================================
+   ADMIN: MANAGE PRODUCTS
+==================================================== */
+function buildAdminCard(p, dashMode = false) {
+  const isCustom = p.isCustom;
+  const unavail = p.unavailable;
+  const statusLabel = unavail
+    ? `<span class="admin-status unavailable">Unavailable</span>`
+    : isCustom
+    ? `<span class="admin-status custom">Custom</span>`
+    : `<span class="admin-status available">Active</span>`;
+
+  return `
+    <div class="admin-pcard${isCustom ? ' is-custom' : ''}">
+      <div class="pimg" style="height:170px">
+        ${p.badge ? `<div class="pbadge">${p.badge}</div>` : ''}
+        <img src="${p.img}" alt="${p.name}" loading="lazy" onerror="this.parentElement.style.background='#1a1f2a'">
+      </div>
+      <div class="pinfo">
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:4px">
+          <div class="admin-cat-tag">${p.cat}</div>
+          ${statusLabel}
+        </div>
+        <div class="pname" style="font-size:.85rem">${p.name}</div>
+        <div class="pdesc" style="font-size:.74rem">${p.desc.substring(0,60)}...</div>
+        <div class="pfooter" style="margin-bottom:0">
+          <div class="pprice">₹${p.price.toLocaleString()}${p.old ? `<span>₹${p.old.toLocaleString()}</span>` : ''}</div>
+        </div>
+      </div>
+      <div class="admin-card-actions">
+        <button class="admin-action-btn btn-toggle-avail${unavail ? ' unavailable' : ''}" onclick="toggleAvailability('${p.id}')">
+          ${unavail ? '✅ Mark Available' : '🚫 Mark Sold Out'}
+        </button>
+        <button class="admin-action-btn btn-edit-prod" onclick="openEditModal('${p.id}')">✏️ Edit</button>
+        <button class="admin-action-btn btn-delete-prod" onclick="confirmDelete('${p.id}')">🗑 Delete</button>
+      </div>
+    </div>`;
+}
+
+function renderManageGrid() {
+  const search = (document.getElementById('mgmtSearch')?.value || '').toLowerCase();
+  const filterSection = document.getElementById('mgmtFilter')?.value || '';
+  const filterStatus = document.getElementById('mgmtStatus')?.value || '';
+
+  let products = getAllProducts();
+
+  if (filterSection) products = products.filter(p => {
+    const sectionMap = {
+      slimJeans:'Slim Jeans', cargoJeans:'Cargo Jeans', brandedJeans:'Branded Jeans',
+      formalShirts:'Formal Shirts', casualShirts:'Casual Shirts', tshirts:'T-Shirts',
+      hoodies:'Hoodies', luxuryWatches:'Luxury Watches', sportsWatches:'Sports Watches', perfumes:'Perfumes'
+    };
+    return p.cat === sectionMap[filterSection] || p.cat.toLowerCase().includes(filterSection.toLowerCase());
+  });
+
+  if (filterStatus === 'available') products = products.filter(p => !p.unavailable);
+  if (filterStatus === 'unavailable') products = products.filter(p => p.unavailable);
+  if (filterStatus === 'custom') products = products.filter(p => p.isCustom);
+
+  if (search) products = products.filter(p =>
+    p.name.toLowerCase().includes(search) ||
+    p.cat.toLowerCase().includes(search) ||
+    p.desc.toLowerCase().includes(search)
+  );
+
+  const grid = document.getElementById('manageProdsGrid');
+  if (!products.length) {
+    grid.innerHTML = '<div class="admin-empty" style="grid-column:1/-1"><div class="ico">🔍</div><p>No products found</p></div>';
+  } else {
+    grid.innerHTML = products.map(p => buildAdminCard(p)).join('');
+  }
+}
+
+/* Toggle available/unavailable */
+function toggleAvailability(id) {
+  const p = getProductById(id);
+  if (!p) return;
+  if (!productOverrides[id]) productOverrides[id] = {};
+  productOverrides[id].unavailable = !p.unavailable;
+  saveState();
+  initGrids();
+  renderManageGrid();
+  if (switchAdminTab.current === 'dashboard') renderAdminDashboard();
+  showToast(`${productOverrides[id].unavailable ? '🚫 Marked as Sold Out' : '✅ Marked as Available'}: ${p.name}`);
+}
+
+/* ====================================================
+   ADMIN: EDIT PRODUCT
+==================================================== */
+function openEditModal(id) {
+  const p = getProductById(id);
+  if (!p) return;
+  document.getElementById('edit-id').value = id;
+  document.getElementById('edit-name').value = p.name;
+  document.getElementById('edit-price').value = p.price;
+  document.getElementById('edit-old').value = p.old || '';
+  document.getElementById('edit-desc').value = p.desc;
+  document.getElementById('edit-img').value = p.img;
+  document.getElementById('edit-badge').value = p.badge || '';
+  // Try to set section
+  const secEl = document.getElementById('edit-section');
+  const catMap = {
+    'Slim Jeans':'slimJeans','Cargo Jeans':'cargoJeans','Branded Jeans':'brandedJeans',
+    'Formal Shirts':'formalShirts','Casual Shirts':'casualShirts','T-Shirts':'tshirts',
+    'Hoodies':'hoodies','Jackets':'hoodies','Luxury Watches':'luxuryWatches',
+    'Sports Watches':'sportsWatches','Perfumes':'perfumes'
+  };
+  if (catMap[p.cat]) secEl.value = catMap[p.cat];
+  document.getElementById('editModalOverlay').classList.add('open');
+}
+
+function closeEditModal() {
+  document.getElementById('editModalOverlay').classList.remove('open');
+}
+
+function saveEditProduct() {
+  const id = document.getElementById('edit-id').value;
+  const name = document.getElementById('edit-name').value.trim();
+  const price = parseInt(document.getElementById('edit-price').value);
+  const old = parseInt(document.getElementById('edit-old').value) || 0;
+  const desc = document.getElementById('edit-desc').value.trim();
+  const img = document.getElementById('edit-img').value.trim();
+  const badge = document.getElementById('edit-badge').value.trim();
+
+  if (!name || !price || !desc || !img) { showToast('❌ Please fill all required fields'); return; }
+
+  if (!productOverrides[id]) productOverrides[id] = {};
+  Object.assign(productOverrides[id], { name, price, old, desc, img, badge });
+
+  // If it's a custom product, also update in customProducts directly
+  for (const section in customProducts) {
+    const idx = customProducts[section].findIndex(p => String(p.id) === String(id));
+    if (idx !== -1) {
+      customProducts[section][idx] = { ...customProducts[section][idx], name, price, old, desc, img, badge };
+    }
+  }
+
+  saveState();
+  initGrids();
+  renderManageGrid();
+  closeEditModal();
+  showToast(`✅ "${name}" updated!`);
+}
+
+/* ====================================================
+   ADMIN: DELETE PRODUCT
+==================================================== */
+let pendingDeleteId = null;
+
+function confirmDelete(id) {
+  const p = getProductById(id);
+  if (!p) return;
+  pendingDeleteId = id;
+  document.getElementById('confirmMsg').textContent = `Are you sure you want to delete "${p.name}"? This cannot be undone.`;
+  document.getElementById('confirmDelBtn').onclick = () => deleteProduct(id);
+  document.getElementById('confirmOverlay').classList.add('open');
+}
+
+function closeConfirm() {
+  document.getElementById('confirmOverlay').classList.remove('open');
+  pendingDeleteId = null;
+}
+
+function deleteProduct(id) {
+  const p = getProductById(id);
+
+  // Remove from customProducts if it's custom
+  let deleted = false;
+  for (const section in customProducts) {
+    const idx = customProducts[section].findIndex(cp => String(cp.id) === String(id));
+    if (idx !== -1) {
+      customProducts[section].splice(idx, 1);
+      deleted = true;
+      break;
+    }
+  }
+
+  // For base products, just mark as deleted via override
+  if (!deleted) {
+    if (!productOverrides[id]) productOverrides[id] = {};
+    productOverrides[id].deletedFromAdmin = true;
+    productOverrides[id].unavailable = true;
+  }
+
+  // Clean override if custom was deleted
+  delete productOverrides[id];
+
+  saveState();
+  initGrids();
+  closeConfirm();
+  renderManageGrid();
+  renderAdminDashboard();
+  showToast(`🗑 "${p?.name || 'Product'}" deleted`);
+}
+
+/* Filter out hard-deleted base products */
+const _origGetSection = getSectionProducts;
+// We patch initGrids to exclude hard-deleted
+function initGrids() {
+  const filterDeleted = list => list.filter(p => !(productOverrides[p.id]?.deletedFromAdmin));
+  rGrid('slim-jeans-grid',     filterDeleted(getSectionProducts('slimJeans')));
+  rGrid('cargo-jeans-grid',    filterDeleted(getSectionProducts('cargoJeans')));
+  rGrid('branded-jeans-grid',  filterDeleted(getSectionProducts('brandedJeans')));
+  rGrid('formal-shirts-grid',  filterDeleted(getSectionProducts('formalShirts')));
+  rGrid('casual-shirts-grid',  filterDeleted(getSectionProducts('casualShirts')));
+  rGrid('tshirts-grid',        filterDeleted(getSectionProducts('tshirts')));
+  rGrid('hoodies-grid',        filterDeleted(getSectionProducts('hoodies')));
+  rGrid('luxury-watches-grid', filterDeleted(getSectionProducts('luxuryWatches')));
+  rGrid('sports-watches-grid', filterDeleted(getSectionProducts('sportsWatches')));
+  rGrid('perfumes-grid',       filterDeleted(getSectionProducts('perfumes')));
+}
+
+/* ====================================================
+   STYLE REELS — STATE & RENDER
+==================================================== */
+let reels = [];
+
+function loadReels() {
+  try { reels = JSON.parse(localStorage.getItem('mc_reels') || '[]'); } catch(e) { reels = []; }
+}
+
+function saveReels() { localStorage.setItem('mc_reels', JSON.stringify(reels)); }
+
+function isVideo(src) {
+  return src && (src.startsWith('data:video') || /\.(mp4|mov|webm|ogg|mkv)(\?|$)/i.test(src));
+}
+
+function buildReelCard(r, idx) {
+  const mediaEl = isVideo(r.src)
+    ? `<video src="${r.src}" muted loop playsinline class="reel-thumb" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"></video>`
+    : `<img src="${r.src}" class="reel-thumb" alt="${r.title}" onerror="this.style.background='#1a1f2a'">`;
+  const waHref = r.wa || `https://wa.me/919031398994?text=Hi%20Raj!%20I%20saw%20your%20reel%20"${encodeURIComponent(r.title)}"%20and%20want%20to%20order!`;
+  return `
+    <div class="reel-card" onmouseenter="hoverReel(this)" onmouseleave="unhoverReel(this)" onclick="openReelLightbox(${idx})">
+      ${mediaEl}
+      <div class="reel-overlay">
+        <div class="reel-top"><span class="reel-cat-chip">${r.cat || 'Look'}</span></div>
+        <div>
+          <div class="reel-label">${r.title}</div>
+          ${r.price ? `<div class="reel-price-tag">₹${parseInt(r.price).toLocaleString()}</div>` : ''}
+          <div class="reel-actions" onclick="event.stopPropagation()">
+            <div class="reel-action-btn" onclick="openReelLightbox(${idx})">▶ Watch</div>
+            <a class="reel-action-btn wa" href="${waHref}" target="_blank">💬 Order</a>
+          </div>
+        </div>
+      </div>
+      <div class="reel-play-ico"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+    </div>`;
+}
+
+function renderReelsSection() {
+  const track = document.getElementById('reelsTrack');
+  if (!track) return;
+  if (!reels.length) {
+    track.innerHTML = `<div class="reels-empty" style="width:min(640px,90vw)"><div class="ico">🎬</div><p>No reels yet — Raj will add style videos here!</p></div>`;
+    return;
+  }
+  track.innerHTML = reels.map((r, i) => buildReelCard(r, i)).join('');
+  // Auto-play videos on hover via JS events (already handled in hoverReel)
+}
+
+function hoverReel(card) {
+  const v = card.querySelector('video');
+  if (v) { v.play().catch(() => {}); }
+}
+function unhoverReel(card) {
+  const v = card.querySelector('video');
+  if (v) { v.pause(); v.currentTime = 0; }
+}
+
+function scrollReels(dir) {
+  const wrap = document.getElementById('reelsTrackWrap');
+  if (wrap) wrap.scrollBy({ left: dir * 280, behavior: 'smooth' });
+}
+
+/* Lightbox */
+function openReelLightbox(idx) {
+  const r = reels[idx];
+  if (!r) return;
+  const media = isVideo(r.src)
+    ? `<video src="${r.src}" class="reel-lb-video" autoplay loop muted controls playsinline></video>`
+    : `<img src="${r.src}" class="reel-lb-img" alt="${r.title}">`;
+  document.getElementById('reelLbMedia').innerHTML = media;
+  document.getElementById('reelLbName').textContent = r.title;
+  document.getElementById('reelLbPrice').textContent = r.price ? `₹${parseInt(r.price).toLocaleString()}` : '';
+  document.getElementById('reelLightbox').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeReelLightboxBtn() {
+  document.getElementById('reelLightbox').classList.remove('open');
+  document.getElementById('reelLbMedia').innerHTML = '';
+  document.body.style.overflow = '';
+}
+function closeReelLightbox(e) {
+  if (e.target === document.getElementById('reelLightbox')) closeReelLightboxBtn();
+}
+
+/* ====================================================
+   ADMIN REELS
+==================================================== */
+let reelUploadData = '';
+
+function handleReelUpload(input) {
+  const file = input.files[0];
+  if (!file) return;
+  if (file.size > 50 * 1024 * 1024) { showToast('❌ File too large! Max 50MB'); return; }
+  const reader = new FileReader();
+  reader.onload = e => {
+    reelUploadData = e.target.result;
+    const preview = document.getElementById('reelMediaPreview');
+    preview.style.display = 'block';
+    preview.innerHTML = isVideo(reelUploadData)
+      ? `<video src="${reelUploadData}" controls muted style="width:100%;max-height:200px;object-fit:cover"></video>`
+      : `<img src="${reelUploadData}" style="width:100%;max-height:200px;object-fit:cover">`;
+    document.getElementById('reel-url-input').value = '';
+    showToast('✅ Media loaded!');
+  };
+  reader.readAsDataURL(file);
+}
+
+function previewReelFromUrl(url) {
+  if (!url) return;
+  reelUploadData = '';
+  const preview = document.getElementById('reelMediaPreview');
+  preview.style.display = 'block';
+  preview.innerHTML = isVideo(url)
+    ? `<video src="${url}" controls muted style="width:100%;max-height:200px;object-fit:cover"></video>`
+    : `<img src="${url}" style="width:100%;max-height:200px;object-fit:cover" onerror="this.style.background='#1a1f2a'">`;
+}
+
+function addReel() {
+  const title = document.getElementById('reel-title').value.trim();
+  const cat = document.getElementById('reel-cat').value;
+  const price = document.getElementById('reel-price').value;
+  const wa = document.getElementById('reel-wa').value.trim();
+  const urlSrc = document.getElementById('reel-url-input').value.trim();
+  const src = reelUploadData || urlSrc;
+
+  if (!title) { showToast('❌ Please enter a reel title'); return; }
+  if (!src) { showToast('❌ Please upload media or paste a URL'); return; }
+
+  reels.unshift({ id: 'r_' + Date.now(), title, cat, price, wa, src });
+  saveReels();
+  renderReelsSection();
+  renderAdminReelsGrid();
+  updateReelCount();
+  resetReelForm();
+  showToast(`🎬 "${title}" published to Drip Zone!`);
+}
+
+function resetReelForm() {
+  document.getElementById('reel-title').value = '';
+  document.getElementById('reel-price').value = '';
+  document.getElementById('reel-wa').value = '';
+  document.getElementById('reel-url-input').value = '';
+  document.getElementById('reel-file-input').value = '';
+  document.getElementById('reelMediaPreview').style.display = 'none';
+  document.getElementById('reelMediaPreview').innerHTML = '';
+  reelUploadData = '';
+}
+
+function deleteReel(id) {
+  reels = reels.filter(r => r.id !== id);
+  saveReels();
+  renderReelsSection();
+  renderAdminReelsGrid();
+  updateReelCount();
+  showToast('🗑 Reel deleted');
+}
+
+function renderAdminReelsGrid() {
+  const grid = document.getElementById('adminReelsGrid');
+  if (!grid) return;
+  if (!reels.length) {
+    grid.innerHTML = '<div class="admin-empty" style="grid-column:1/-1"><div class="ico">🎬</div><p>No reels yet. Upload your first look!</p></div>';
+    return;
+  }
+  grid.innerHTML = reels.map(r => {
+    const thumb = isVideo(r.src)
+      ? `<video src="${r.src}" muted style="width:100%;height:160px;object-fit:cover;display:block"></video>`
+      : `<img src="${r.src}" style="width:100%;height:160px;object-fit:cover;display:block" onerror="this.style.background='#1a1f2a'">`;
+    return `
+      <div class="admin-reel-card">
+        <div style="height:160px;overflow:hidden;background:#0d1117">${thumb}</div>
+        <div class="admin-reel-info">
+          <div class="admin-reel-cat">${r.cat}</div>
+          <div class="admin-reel-name">${r.title}</div>
+          ${r.price ? `<div style="color:var(--accent);font-family:'Bebas Neue',sans-serif;font-size:.95rem;margin-bottom:8px">₹${parseInt(r.price).toLocaleString()}</div>` : '<div style="margin-bottom:8px"></div>'}
+          <div class="admin-reel-actions">
+            <button class="admin-action-btn btn-delete-prod" style="width:100%" onclick="deleteReel('${r.id}')">🗑 Delete Reel</button>
+          </div>
+        </div>
+      </div>`;
+  }).join('');
+}
+
+function updateReelCount() {
+  const badge = document.getElementById('reelCountBadge');
+  if (badge) badge.textContent = reels.length;
+}
+
+/* ====================================================
+   BOOT
+==================================================== */
+loadState();
+loadReels();
+initGrids();
+renderReelsSection();
+</script>
+</body>
+</html>
